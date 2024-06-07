@@ -6,4 +6,4 @@ import tailwind from "@astrojs/tailwind";
 export default defineConfig({
   output: "server",
   integrations: [tailwind()]
-});2
+});

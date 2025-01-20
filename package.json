@@ -13,6 +13,8 @@
     "@astrojs/tailwind": "^5.1.0",
     "astro": "^4.9.2",
     "astro-particles": "^2.10.0",
+    "flowbite": "^2.5.2",
+    "swiper": "^11.2.1",
     "tailwindcss": "^3.4.3",
     "three": "^0.165.0",
     "tsparticles": "^3.4.0",

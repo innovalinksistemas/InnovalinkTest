@@ -1,178 +1,43 @@
 ---
 import { Image } from "astro:assets";
 import logo from "../../src/images/Picture1.png";
-import logo1 from "../../src/images/logo1.png";
-import logo2 from "../../src/images/logo2.png";
-import logo3 from "../../src/images/logo3.png";
-import logo4 from "../../src/images/logo4.png";
-import web from "../../src/images/web.png";
-import api from "../../src/images/api.png";
-import face from "../../src/images/face.png";
-import linked from "../../src/images/link.png";
-import insta from "../../src/images/inst.png";
 import Header from "./Header.astro";
+import AboutUs from "./AboutUs.astro";
+import Technologies from "./Technologies.astro";
+import Services from "./Services.astro";
+import Solutions from "./Solutions.astro";
 ---
-<Header/>
-<div class="bg-blue-950 flex flex-col">
-  <!-- First  -->
-  <div class="lg:h-screen">
-    <div class="w-[220px] pl-12 pt-8 lg:w-auto lg:pt-32">
-      <p class="text-white lg:text-3xl text-center">
-        <span class="text-blue-400 drop-shadown-xl">Innovar </span>es nuestra
-        mayor meta<br/> para aceptar las nuevas eras
+
+<Header />
+
+<div class="flex flex-col">
+  <div
+    class="lg:h-screen flex flex-col lg:flex-row items-center justify-between px-6 lg:px-12 bg-no-repeat bg-cover bg-center bg-[url('/src/images/fondo.gif')]"
+  >
+   
+    <div class="lg:w-1/2 flex flex-col items-center lg:items-start text-center lg:text-left">
+      <p class="text-white drop-shadow-xl text-2xl lg:text-4xl font-bold">
+        Innovar y diseñar
+      </p>
+      <p class="text-white text-lg lg:text-2xl mt-4">
+        Es nuestra mayor meta<br />para aceptar las nuevas eras
       </p>
     </div>
-    <div id="back-animated" class="ml-28 lg:ml-0 lg:flex lg:justify-center">
-      <Image class="" src={logo} alt="Innova logo" />
+   
+    <div class="lg:w-1/2 flex justify-center mt-5 lg:mt-0">
+      <Image
+        width="300"
+        height="300"
+        class="w-auto h-auto lg:w-[500px] lg:h-[500px]"
+        src={logo}
+        alt="Innova logo"
+      />
     </div>
   </div>
-  <!-- First -->
-  <div class="text-white p-2 lg:text-4xl lg:mx-auto ">
-    <p class="pb-2 text-center lg:pb-8">Por que nosotros</p>
-    <div class="border-solid border-2 border-blue-500 w-52 rounded-lg lg:w-auto">
-      <div class="p-2">
-        <p>
-          Nos especializamos en formentar al cliente en que la tecnologia es
-          factible para su empresa.
-        </p>
-      </div>
-    </div>
-  </div>
-  <!-- First -->
-  <!-- Second -->
-  <div class="lg:mx-auto lg:pt-16">
-    <p class="text-white pb-3 text-4xl">Tecnologias utilizadas en los proyectos</p>
-    <div class="text-white">
-      <div class="bg-gray-300 w-52 rounded-lg p-2 float-right lg:float-none lg:w-auto">
-        <p class="text-black text-center">Desarrollo Web & API</p>
-        <div class="grid grid-cols-2 gap-4">
-          <div>
-            <Image
-              class="pt-4"
-              src={logo4}
-              alt="Un pájaro."
-              width="200"
-              height="200"
-            />
-            <Image
-              class="pt-4"
-              src={logo2}
-              alt="Un pájaro."
-              width="200"
-              height="200"
-            />
-          </div>
-          <div>
-            <Image src={logo3} alt="Un pájaro." width="200" height="200" />
-            <Image src={logo1} alt="Un pájaro." width="200" height="200" />
-          </div>
-          <div></div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- Sevcond -->
+</div>
 
-  <!-- Tercero -->
-  <div class="pb-4 lg:pt-8">
-    <p class="text-white lg:text-4xl lg:text-center">Servicios Brindados</p>
-    <div class="p-2">
-      <div class="bg-gray-300 w-56 rounded-lg p-2 mx-auto lg:w-[50%] lg:h-[50%]">
-        <p class="text-black text-center lg:text-3xl">DESARROLLO WEB</p>
-        <div class="grid grid-cols-2 gap-4 lg:items-center lg:place-items-center">
-          <div>
-            <Image
-              class="pt-4"
-              src={web}
-              alt="Un pájaro."
-              width="350"
-              height="350"
-            />
-          </div>
-          <div>
-            <ul class="text-black lg:text-3xl">
-              <li>Ecommerce</li>
-              <li>Landing Page</li>
-              <li>Informativa</li>
-              <li>Corporativa</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div>
-      <div class="bg-gray-300 w-56 rounded-lg p-2 mx-auto lg:w-[50%] ">
-        <p class="text-black text-center">API</p>
-        <div class="grid grid-cols-1 gap-4 ">
-          <div>
-            <Image
-              class="pt-4 mx-auto"
-              src={api}
-              alt="Un pájaro."
-              width="400"
-              height="400"
-            />
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="p-2">
-      <div class="bg-gray-300 w-56 rounded-lg p-2 mx-auto lg:w-[50%]">
-        <p class="text-black text-center">SEO & MARKETING</p>
-        <div class="grid grid-cols-2 gap-4 lg:items-center lg:place-items-center">
-          <div>
-            <Image
-              class="pt-4"
-              src={web}
-              alt="Un pájaro."
-              width="350"
-              height="350"
-            />
-          </div>
-          <div>
-            <ul class="text-black lg:text-3xl">
-              <li>Ecommerce</li>
-              <li>Landing Page</li>
-              <li>Informativa</li>
-              <li>Corporativa</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="grid justify-center" >
-      <div class="flex space-x-2">
-        <p class="text-6xl text-blue-400 lg:text-9xl">7</p>
-        <div>
-          <p class="text-lg text-blue-400 lg:text-6xl">Proyectos</p>
-          <p class="text-lg text-blue-400 lg:text-6xl">Finalizados</p>
-        </div>
-      
-      </div>
-      <hr class="border-2 rounded-sme border-blue-400"/>
-    </div>
-  </div>
-  <!-- Tercero -->
-
-  <!-- Footer -->
-  <div>
-    <hr class="border-2 rounded-sme border-blue-400"/>
-    <div class="text-center">
-      <div class="flex flex-col text-white pb-4 pt-2">
-        <a href="">Services</a>
-        <a href="">Services</a>
-        <a href="">Services</a>
-      </div>
-      <div class="flex justify-center space-x-4">
-        <Image src={insta} alt="Un pájaro." />
-        <Image src={face} alt="Un pájaro."  />
-        <Image src={linked} alt="Un pájaro." width="50" />
-      </div>
-      <p class="text-white pt-2">©2024 Innovalinkcr</p>
-    </div>
-  </div>
-  
-  <!-- Footer -->
+  <AboutUs />
+  <Technologies />
+  <Services />
+  <Solutions />
 </div>

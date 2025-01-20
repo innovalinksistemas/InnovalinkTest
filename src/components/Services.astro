@@ -1,0 +1,223 @@
+---
+import { Image } from "astro:assets";
+import web from "../../src/images/web.jpg";
+import api from "../../src/images/api.png";
+import mk from "../../src/images/mk.jpg";
+---
+
+<div id="services" class="bg-white pb-4 lg:pt-8">
+  <p class="text-black text-2xl lg:text-4xl text-center mb-6">
+    Servicios Brindados
+  </p>
+
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 p-6">
+    <div class="bg-gray-800 border border-gray-200 rounded-lg shadow mx-auto">
+      <p class="text-white text-center text-xl lg:text-3xl pt-4">
+        Desarrollo web
+      </p>
+      <div class="flex justify-center items-center">
+        <Image
+          class="pt-4 object-cover w-full h-48 rounded-t-lg md:h-64"
+          src={web}
+          alt="Un sitio web."
+        />
+      </div>
+      <div class="p-5 text-center">
+        <button
+          class="openModalButton inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800"
+          data-modal-target="modal1"
+        >
+          Más información
+          <svg
+            class="rtl:rotate-180 w-3.5 h-3.5 ms-2"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 14 10"
+          >
+            <path
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M1 5h12m0 0L9 1m4 4L9 9"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <div
+      id="modal1"
+      class="fixed inset-0 z-50 hidden bg-black bg-opacity-50 flex items-center justify-center"
+    >
+      <div class="bg-white rounded-lg shadow-lg w-96">
+        <div class="flex justify-between items-center p-4 border-b">
+          <h3 class="text-lg font-semibold">Desarrollo web</h3>
+          <button class="closeModalButton text-gray-500 hover:text-gray-700">
+            &times;
+          </button>
+        </div>
+        <div class="p-4">
+          <p class="text-gray-700">
+            Este es el contenido del modal. Aquí se va a colocar información
+            sobre qué tipo de páginas hacemos.
+          </p>
+        </div>
+        <div class="p-4 border-t">
+          <button
+            class="closeModalButton bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600"
+          >
+            Cerrar
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- -------------------------------------------------------------------------------------- -->
+    <div class="bg-gray-800 border border-gray-200 rounded-lg shadow mx-auto">
+      <p class="text-white text-center text-xl lg:text-3xl pt-4">API</p>
+      <div class="flex justify-center items-center">
+        <Image
+          class="pt-4 object-cover w-full h-48 rounded-t-lg md:h-64"
+          src={api}
+          alt="Un API."
+        />
+      </div>
+      <div class="p-5 text-center">
+        <button
+          class="openModalButton inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800"
+          data-modal-target="modal2"
+        >
+          Más información
+          <svg
+            class="rtl:rotate-180 w-3.5 h-3.5 ms-2"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 14 10"
+          >
+            <path
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M1 5h12m0 0L9 1m4 4L9 9"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <div
+      id="modal2"
+      class="fixed inset-0 z-50 hidden bg-black bg-opacity-50 flex items-center justify-center"
+    >
+      <div class="bg-white rounded-lg shadow-lg w-96">
+        <div class="flex justify-between items-center p-4 border-b">
+          <h3 class="text-lg font-semibold">API</h3>
+          <button class="closeModalButton text-gray-500 hover:text-gray-700">
+            &times;
+          </button>
+        </div>
+        <div class="p-4">
+          <p class="text-gray-700">
+            Este es el contenido del modal. Aquí se va a colocar información
+            sobre APIs.
+          </p>
+        </div>
+        <div class="p-4 border-t">
+          <button
+            class="closeModalButton bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600"
+          >
+            Cerrar
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- --------------------------------------------------------------------------------------------------- -->
+    <div class="bg-gray-800 border border-gray-200 rounded-lg shadow mx-auto">
+      <p class="text-white text-center text-xl lg:text-3xl pt-4">
+        SEO & MARKETING
+      </p>
+      <div class="flex justify-center items-center">
+        <Image
+          class="pt-4 object-cover w-full h-48 rounded-t-lg md:h-64"
+          src={mk}
+          alt="SEO y marketing."
+        />
+      </div>
+      <div class="p-5 text-center">
+        <button
+          class="openModalButton inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800"
+          data-modal-target="modal3"
+        >
+          Más información
+          <svg
+            class="rtl:rotate-180 w-3.5 h-3.5 ms-2"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 14 10"
+          >
+            <path
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M1 5h12m0 0L9 1m4 4L9 9"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <div
+      id="modal3"
+      class="fixed inset-0 z-50 hidden bg-black bg-opacity-50 flex items-center justify-center"
+    >
+      <div class="bg-white rounded-lg shadow-lg w-96">
+        <div class="flex justify-between items-center p-4 border-b">
+          <h3 class="text-lg font-semibold">SEO & MARKETING</h3>
+          <button class="closeModalButton text-gray-500 hover:text-gray-700">
+            &times;
+          </button>
+        </div>
+        <div class="p-4">
+          <p class="text-gray-700">
+            Este es el contenido del modal. Aquí se va a colocar información
+            sobre SEO y Marketing.
+          </p>
+        </div>
+        <div class="p-4 border-t">
+          <button
+            class="closeModalButton bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600"
+          >
+            Cerrar
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  document.querySelectorAll(".openModalButton").forEach((button) => {
+    button.addEventListener("click", (event) => {
+      const target = event.target as HTMLElement;
+      const modalId = target
+        .closest("button")
+        ?.getAttribute("data-modal-target");
+      if (modalId) {
+        const modal = document.getElementById(modalId);
+        if (modal) modal.classList.remove("hidden");
+      }
+    });
+  });
+
+  document.querySelectorAll(".closeModalButton").forEach((button) => {
+    button.addEventListener("click", (event) => {
+      const target = event.target as HTMLElement;
+      const modal = target.closest(".fixed");
+      if (modal) modal.classList.add("hidden");
+    });
+  });
+</script>

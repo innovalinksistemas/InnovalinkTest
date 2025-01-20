@@ -1,0 +1,93 @@
+---
+import { Image } from "astro:assets";
+import servicio1 from "../../src/images/servicio1.jpeg";
+import servicio2 from "../../src/images/servicio2.jpg";
+import servicio3 from "../../src/images/servicio3.jpg";
+---
+
+<div id="aboutUs" class="bg-white p-4">
+
+  <div class="text-black p-4 lg:max-w-4xl lg:mx-auto">
+    <p class="pb-4 text-center text-xl lg:text-4xl">¿Quiénes somos?</p>
+    <div class="max-w-xs mx-auto lg:max-w-full">
+      <div class="p-4">
+        <p class="text-sm text-justify lg:text-base">
+          Somos una empresa especializada en desarrollo web y soluciones
+          tecnológicas personalizadas. Nuestro enfoque principal es guiar a
+          nuestros clientes en la transformación digital, ayudándoles a
+          implementar tecnologías innovadoras que no solo sean efectivas, sino
+          también adecuadas para sus objetivos empresariales.
+        </p>
+      </div>
+    </div>
+  </div>
+  <hr class="w-full sm:w-3/4 md:w-2/3 lg:w-1/2 mx-auto border-black my-4" />
+
+</div>
+
+<div class="bg-white">
+  <p class="pb-4 text-center text-xl lg:text-4xl">¿Qué ofrecemos?</p>
+  <div class="bg-white px-4 py-8">
+    <div
+      class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto"
+    >
+
+      <div class="bg-white border border-blue-200 rounded-lg shadow-md">
+        <div class="flex justify-center mt-6">
+          <Image
+           src={servicio1}
+            alt="Profile Picture"
+            class="w-24 h-24 rounded-full"
+          />
+        </div>
+        <div class="p-6 text-center">
+          <h2 class="text-xl font-semibold text-gray-800">
+            <strong>Creación de páginas web modernas y funcionales:</strong>
+          </h2>
+          <p class="text-sm text-gray-500 mt-2">
+            Diseñamos sitios web que combinan creatividad y tecnología para
+            ofrecer experiencias excepcionales a los usuarios.
+          </p>
+        </div>
+      </div>
+
+      <div class="bg-white border border-blue-200 rounded-lg shadow-md">
+        <div class="flex justify-center mt-6">
+          <Image
+            src={servicio2}
+            alt="Profile Picture"
+            class="w-24 h-24 rounded-full"
+          />
+        </div>
+        <div class="p-6 text-center">
+          <h2 class="text-xl font-semibold text-gray-800">
+            <strong>Soluciones personalizadas:</strong>
+          </h2>
+          <p class="text-sm text-gray-500 mt-2">
+            Identificamos las necesidades específicas de cada cliente para
+            proponer herramientas tecnológicas que impulsen su crecimiento.
+          </p>
+        </div>
+      </div>
+
+      <div class="bg-white border border-blue-200 rounded-lg shadow-md">
+        <div class="flex justify-center mt-6">
+          <Image
+            src={servicio3}
+            alt="Profile Picture"
+            class="w-24 h-24 rounded-full "
+          />
+        </div>
+        <div class="p-6 text-center">
+          <h2 class="text-xl font-semibold text-gray-800">
+            <strong>Asesoría estratégica:</strong>
+          </h2>
+          <p class="text-sm text-gray-500 mt-2">
+            Más allá de desarrollar, guiamos a las empresas hacia las mejores
+            prácticas digitales.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

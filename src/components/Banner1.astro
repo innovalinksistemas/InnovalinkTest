@@ -1,0 +1,17 @@
+---
+import { Image } from "astro:assets";
+import flecha1 from "../../public/flecha4.png";
+import flecha2 from "../../public/flecha5.png";
+
+---
+
+<div class="bg-white h-[300px]">
+    <Image class="h-auto w-auto relative top-14" src={flecha1} alt="flecha1" />
+    <Image class="h-auto w-auto relative " src={flecha2} alt="flecha2" />
+   
+    <div class="flex justify-center items-center my-16 ">
+        <p class="text-3xl">" Conectamos la innovación con la tecnología <br>
+            para impulsar tu negocio al siguiente nivel "</p>
+        <button class="bg-[#0099CD] p-6  rounded-lg mx-16 text-3xl text-white">Contáctanos</button>
+    </div>
+</div>

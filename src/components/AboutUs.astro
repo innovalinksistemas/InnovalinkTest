@@ -1,17 +1,28 @@
 ---
 import { Image } from "astro:assets";
-import servicio1 from "../../src/images/servicio1.jpeg";
-import servicio2 from "../../src/images/servicio2.jpg";
-import servicio3 from "../../src/images/servicio3.jpg";
+import flecha1 from "../../public/flecha4.png";
+import flecha2 from "../../public/flecha5.png";
+
+import layer1 from "../../public/layer_1.png";
+import layer2 from "../../public/layer_2.png";
+import layer3 from "../../public/layer_3.png";
+
+import bot from "../../public/bot.png";
+
+
+
+// import servicio1 from "../../src/images/servicio1.jpeg";
+// import servicio2 from "../../src/images/servicio2.jpg";
+// import servicio3 from "../../src/images/servicio3.jpg";
 ---
 
-<div id="aboutUs" class="bg-white p-4">
+<div id="aboutUs" class="bg-no-repeat bg-cover bg-center bg-[url('/public/fondo1.png')] p-4">
 
-  <div class="text-black p-4 lg:max-w-4xl lg:mx-auto">
-    <p class="pb-4 text-center text-xl lg:text-4xl">¿Quiénes somos?</p>
+  <div class="text-white p-4 lg:max-w-4xl lg:mx-auto ">
+    <p class="pb-4 text-center text-xl font-bold lg:text-5xl">Quienes Somos</p>
     <div class="max-w-xs mx-auto lg:max-w-full">
       <div class="p-4">
-        <p class="text-sm text-justify lg:text-base">
+        <p class="text-sm text-center lg:text-base">
           Somos una empresa especializada en desarrollo web y soluciones
           tecnológicas personalizadas. Nuestro enfoque principal es guiar a
           nuestros clientes en la transformación digital, ayudándoles a
@@ -21,73 +32,68 @@ import servicio3 from "../../src/images/servicio3.jpg";
       </div>
     </div>
   </div>
-  <hr class="w-full sm:w-3/4 md:w-2/3 lg:w-1/2 mx-auto border-black my-4" />
 
 </div>
 
 <div class="bg-white">
-  <p class="pb-4 text-center text-xl lg:text-4xl">¿Qué ofrecemos?</p>
+  <p class="pb-4 text-center text-xl lg:text-4xl pt-[156px]">¿Qué ofrecemos?</p>
+
+
+  <Image class="w-80 relative top-2" src={flecha1} alt="flecha1" />
+  <Image class="w-80 relative -top-8" src={flecha2} alt="flecha2" />
+
+  <Image class="w-80 relative -top-8 float-right rotate-180" src={flecha1} alt="flecha1" />
+
+
   <div class="bg-white px-4 py-8">
     <div
-      class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto"
+      class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl place-items-center mx-auto"
     >
 
-      <div class="bg-white border border-blue-200 rounded-lg shadow-md">
-        <div class="flex justify-center mt-6">
-          <Image
-           src={servicio1}
-            alt="Profile Picture"
-            class="w-24 h-24 rounded-full"
-          />
-        </div>
-        <div class="p-6 text-center">
-          <h2 class="text-xl font-semibold text-gray-800">
-            <strong>Creación de páginas web modernas y funcionales:</strong>
+      <div class="bg-white rounded-xl shadow-md w-[300px] h-[350px]">
+        <div class="text-center  ">
+          <h2 class="text-xl font-semibold text-white rounded-t-xl  bg-gradient-to-r from-[#0f103e] to-[#54ceff] p-4 ">
+            <strong>Creación de Páginas Web Modernas y Funcionales:</strong>
           </h2>
-          <p class="text-sm text-gray-500 mt-2">
-            Diseñamos sitios web que combinan creatividad y tecnología para
-            ofrecer experiencias excepcionales a los usuarios.
+          <p class="text-sm text-gray-500 mt-2 py-4 px-6">
+            Desarrollamos sitios web a la medida, fusionando creatividad y tecnología de última generación. Cada página que diseñamos está pensada para ofrecer experiencias únicas e interactivas, que no solo capturan la atención de los usuarios, sino que también cumplen con los más altos estándares de funcionalidad y rendimiento.
           </p>
+          <Image class="w-8 float-right mx-4" src={layer3} alt=""/>
         </div>
       </div>
 
-      <div class="bg-white border border-blue-200 rounded-lg shadow-md">
-        <div class="flex justify-center mt-6">
-          <Image
-            src={servicio2}
-            alt="Profile Picture"
-            class="w-24 h-24 rounded-full"
-          />
-        </div>
-        <div class="p-6 text-center">
-          <h2 class="text-xl font-semibold text-gray-800">
-            <strong>Soluciones personalizadas:</strong>
+      <div class="bg-white rounded-xl shadow-md w-[300px] h-[350px]">
+        <div class="text-center">
+          <h2 class="text-xl font-semibold text-white rounded-t-xl  bg-gradient-to-r from-[#0f103e] to-[#54ceff] p-4 ">
+            <strong>SolucionesPersonalizadas:</strong>
           </h2>
-          <p class="text-sm text-gray-500 mt-2">
-            Identificamos las necesidades específicas de cada cliente para
-            proponer herramientas tecnológicas que impulsen su crecimiento.
+          <p class="text-sm text-gray-500 mt-2 py-4 px-6">
+            Nos sumergimos en las necesidades únicas de cada cliente para diseñar soluciones tecnológicas a medida que potencian su crecimiento. Proponemos herramientas innovadoras y estrategias adaptadas, que permiten a las empresas alcanzar su máximo potencial de manera eficiente y escalable.
           </p>
+          <Image class="w-8 float-right mt-7 mx-4" src={layer1} alt=""/>
         </div>
       </div>
 
-      <div class="bg-white border border-blue-200 rounded-lg shadow-md">
-        <div class="flex justify-center mt-6">
-          <Image
-            src={servicio3}
-            alt="Profile Picture"
-            class="w-24 h-24 rounded-full "
-          />
-        </div>
-        <div class="p-6 text-center">
-          <h2 class="text-xl font-semibold text-gray-800">
-            <strong>Asesoría estratégica:</strong>
+      <div class="bg-white rounded-xl shadow-md w-[300px] h-[350px]">
+        <div class=" text-center">
+          <h2 class="text-xl font-semibold text-white rounded-t-xl  bg-gradient-to-r from-[#0f103e] to-[#54ceff] p-4 ">
+            <strong>Asesoría <br> Estratégica:</strong>
           </h2>
-          <p class="text-sm text-gray-500 mt-2">
-            Más allá de desarrollar, guiamos a las empresas hacia las mejores
-            prácticas digitales.
+          <p class="text-sm text-gray-500 mt-2 py-4 px-6">
+            No solo desarrollamos, sino que acompañamos a las empresas en su viaje digital, guiándolas hacia las mejores prácticas y estrategias digitales. Nuestro enfoque consultivo asegura que cada decisión esté alineada con sus objetivos a largo plazo, optimizando recursos y maximizando resultados.
           </p>
+          <Image class="w-8 float-right mx-4" src={layer2} alt=""/>
         </div>
       </div>
+
     </div>
+  </div>
+</div>
+
+<div class="flex items-center bg-white py-24 ">
+  <Image class="w-[300px] relative left-16 animate-bounce" src={bot} alt="" />
+  <div class="w-[960px] h-auto py-24 px-10 bg-[#efefef] rounded-tr-[50px] rounded-bl-[50px] shadow-[2px_4px_4px_0px_rgba(0,0,0,0.30)]">
+    <h2 class="text-right justify-start  bg-gradient-to-r from-[#0f103e] to-[#54ceff] bg-clip-text text-transparent text-[80px] font-bold">Nuestros Servicios</h2>
+    <p class="text-right justify-center text-[#383838] text-[20px] font-medium px-6">Sumérgete en el mundo digital con nuestras soluciones de vanguardia. Cada uno de nuestros servicios está diseñado para llevar tu negocio al siguiente nivel</p>
   </div>
 </div>

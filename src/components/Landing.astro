@@ -1,7 +1,16 @@
 ---
 import { Image } from "astro:assets";
-import logo from "../../src/images/Picture1.png";
+import logo from "../../public/res/Picture1.png";
+import flecha1 from "../../public/flecha1.png";
+import flecha2 from "../../public/flecha2.png";
+import flecha3 from "../../public/flecha3.png";
+
+import particula1 from "../../public/particula1.png";
+
+
 import Header from "./Header.astro";
+import Repair from "./Repair.astro";
+import Banner1 from "./Banner1.astro";
 import AboutUs from "./AboutUs.astro";
 import Technologies from "./Technologies.astro";
 import Services from "./Services.astro";
@@ -11,33 +20,33 @@ import Solutions from "./Solutions.astro";
 <Header />
 
 <div class="flex flex-col">
+
+  <Image class="h-auto w-auto absolute top-56 " src={flecha1} alt="flecha1" />
+  <Image class="h-auto w-auto absolute top-[650px] " src={flecha2} alt="flecha2" />
+  <Image class="h-auto w-auto absolute top-[570px] right-0" src={flecha3} alt="flecha3" />
+
   <div
-    class="lg:h-screen flex flex-col lg:flex-row items-center justify-between px-6 lg:px-12 bg-no-repeat bg-cover bg-center bg-[url('/src/images/fondo.gif')]"
+    class="lg:h-screen flex flex-col lg:flex-row items-center justify-between px-6 lg:px-12 bg-no-repeat bg-cover bg-center bg-[url('/public/fondo1.png')]"
   >
    
-    <div class="lg:w-1/2 flex flex-col items-center lg:items-start text-center lg:text-left">
-      <p class="text-white drop-shadow-xl text-2xl lg:text-4xl font-bold">
-        Innovar y diseñar
-      </p>
-      <p class="text-white text-lg lg:text-2xl mt-4">
-        Es nuestra mayor meta<br />para aceptar las nuevas eras
-      </p>
+    <div class="lg:w-auto flex flex-col items-center lg:items-start text-center lg:text-left">
+
+      <h2 class="text-white drop-shadow-xl italic text-2xl lg:text-[170px] font-bold font-['Monda'] py-10 animate-pulse">
+        INNOVALINK
+      </h2>
+      <h3 class="text-white text-lg lg:text-[40px]  pl-6 pt-8">
+        Desarrollo Web y Diseño Gráfico
+      </h3>
+      <p class="text-white text-lg lg:text-2xl pl-6 pt-4">
+        Transformamos ideas en soluciones <br>
+        tecnológicas innovadoras</p>
     </div>
    
-    <div class="lg:w-1/2 flex justify-center mt-5 lg:mt-0">
-      <Image
-        width="300"
-        height="300"
-        class="w-auto h-auto lg:w-[500px] lg:h-[500px]"
-        src={logo}
-        alt="Innova logo"
-      />
-    </div>
+
   </div>
 </div>
-
+<Banner1 />
   <AboutUs />
-  <Technologies />
   <Services />
   <Solutions />
 </div>

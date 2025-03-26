@@ -8,19 +8,20 @@ import Footer from "@components/Footer.astro";
   <head>
     <meta charset="UTF-8" />
     <meta name="description" content="Astro description" />
-    <meta name="viewport" content="width=device-width" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-
+    <link rel="stylesheet" href="../components/background/stars.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Monda:wght@400..700&family=Playwrite+SK:wght@100..400&family=Radley:ital@0;1&display=swap" rel="stylesheet">
-
+    <link rel="stylesheet" href="../components/background/stars.js">
     <meta name="generator" content={Astro.generator} />
     <title>InnovaTest</title>
 
   </head>
   <body>
-    <div class="bg-blue-400">
+    <canvas id="cnv" class="absolute top-0 left-0 w-screen h-screen"></canvas>
+    <div class="">
       <Landing />
       <Footer/>
       <slot />
@@ -28,3 +29,38 @@ import Footer from "@components/Footer.astro";
 	
   </body>
 </html>
+
+<script>
+  //Get context and screen size;
+var ctx = cnv.getContext("2d");
+var W = window.innerWidth;
+var H = window.innerHeight;
+
+//Set Canvas and Background Color;
+cnv.width = W;
+cnv.height = H;
+ctx.fillStyle = "#112";
+ctx.fillRect(0, 0, W, H);
+
+//Glow effect;
+ctx.shadowBlur = 10;
+ctx.shadowColor = "white";
+
+function animate() {
+  //Random position and size of stars;
+  let x = W * Math.random();
+  let y = H * Math.random();
+  let r = 2.5 * Math.random();
+
+  //Draw the stars;
+  ctx.beginPath();
+  ctx.fillStyle = "white";
+  ctx.arc(x, y, r, 0, Math.PI * 2);
+  ctx.fill();
+
+  //Using setTimeout instead of window.requestAnimationFrame for slower speed... window.requestAnimationFrame is approximately equal to setTimeout(func, 17);
+  setTimeout(animate, 100);
+}
+animate();
+
+</script>

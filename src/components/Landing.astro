@@ -1,12 +1,11 @@
 ---
 import { Image } from "astro:assets";
-import logo from "../../public/res/Picture1.png";
 import flecha1 from "../../public/flecha1.png";
 import flecha2 from "../../public/flecha2.png";
 import flecha3 from "../../public/flecha3.png";
 
 import particula1 from "../../public/particula1.png";
-
+import logo from "../../public/logoinnova.png";
 
 import Header from "./Header.astro";
 import Repair from "./Repair.astro";
@@ -20,32 +19,47 @@ import Solutions from "./Solutions.astro";
 <Header />
 
 <div class="flex flex-col">
+  <Image class="h-auto w-auto absolute top-56" src={flecha1} alt="flecha1" />
+  <Image
+    class="h-auto w-auto absolute top-[650px]"
+    src={flecha2}
+    alt="flecha2"
+  />
+  <Image
+    class="h-auto w-auto absolute top-[570px] right-0"
+    src={flecha3}
+    alt="flecha3"
+  />
+<div class="sm:pt-[18%] 2xl:pt-[5%] ">
+  <div class="lg:h-screen flex-col flex  px-6 lg:px-12">
+    <div
+      class="z-10 lg:w-auto flex flex-col items-center lg:items-start text-center lg:text-left"
+    >
+      <div class="flex sm:space-x-32 2xl:space-x-96 justify-center items-center">
+        <div>
+          <h2
+            class="text-white drop-shadow-xl italic text-[140px] 2xl:text-[170px] font-bold font-['Monda'] 2xl:py-10 animate-pulse"
+          >
+            INNOVALINK
+          </h2>
 
-  <Image class="h-auto w-auto absolute top-56 " src={flecha1} alt="flecha1" />
-  <Image class="h-auto w-auto absolute top-[650px] " src={flecha2} alt="flecha2" />
-  <Image class="h-auto w-auto absolute top-[570px] right-0" src={flecha3} alt="flecha3" />
-
-  <div
-    class="lg:h-screen flex flex-col lg:flex-row items-center justify-between px-6 lg:px-12 bg-no-repeat bg-cover bg-center bg-[url('/public/fondo1.png')]"
-  >
-   
-    <div class="lg:w-auto flex flex-col items-center lg:items-start text-center lg:text-left">
-
-      <h2 class="text-white drop-shadow-xl italic text-2xl lg:text-[170px] font-bold font-['Monda'] py-10 animate-pulse">
-        INNOVALINK
-      </h2>
-      <h3 class="text-white text-lg lg:text-[40px]  pl-6 pt-8">
-        Desarrollo Web y Diseño Gráfico
-      </h3>
-      <p class="text-white text-lg lg:text-2xl pl-6 pt-4">
-        Transformamos ideas en soluciones <br>
-        tecnológicas innovadoras</p>
+          <h3 class="text-white text-lg 2xl:text-[40px] pl-6 2xl:pt-8">
+            Desarrollo Web y Diseño Gráfico
+          </h3>
+          <p class="text-white text-lg lg:text-2xl pl-6 2xl:pt-4">
+            Transformamos ideas en soluciones <br />
+            tecnológicas innovadoras
+          </p>
+        </div>
+        <div>
+          <Image src={logo} alt="logo" />
+        </div>
+      </div>
     </div>
-   
-
   </div>
 </div>
-<Banner1 />
+ 
+  <Banner1 />
   <AboutUs />
   <Services />
   <Solutions />

@@ -90,10 +90,30 @@ import bot from "../../public/bot.png";
   </div>
 </div>
 
-<div class="flex items-center bg-white py-24 ">
+<div class="flex flex-col lg:flex-row items-center bg-white py-12 px-4 lg:py-24 lg:px-32 gap-8">
+  <!-- Imagen -->
+  <Image 
+    class="w-48 h-48 sm:w-24 sm:h-24 lg:w-[300px] lg:h-auto animate-bounce"
+    src={bot}
+    alt="bot"
+  />
+
+  <!-- Contenido -->
+  <div class="w-full lg:w-[960px] h-auto p-6 lg:p-10 bg-[#efefef] rounded-tr-[30px] lg:rounded-tr-[50px] rounded-bl-[30px] lg:rounded-bl-[50px] shadow-[2px_4px_4px_0px_rgba(0,0,0,0.30)]">
+    <h2 class="text-center lg:text-right bg-gradient-to-r from-[#0f103e] to-[#54ceff] bg-clip-text text-transparent text-3xl sm:text-5xl lg:text-[80px] font-bold">
+      Nuestros Servicios
+    </h2>
+    <p class="text-center lg:text-right text-[#383838] text-base sm:text-lg lg:text-[20px] font-medium mt-4">
+      Sumérgete en el mundo digital con nuestras soluciones de vanguardia. Cada uno de nuestros servicios está diseñado para llevar tu negocio al siguiente nivel.
+    </p>
+  </div>
+</div>
+
+
+
+<!-- <div class="flex items-center bg-white py-24 ">
   <Image class="w-[300px] relative left-16 animate-bounce" src={bot} alt="" />
   <div class="w-[960px] h-auto py-24 px-10 bg-[#efefef] rounded-tr-[50px] rounded-bl-[50px] shadow-[2px_4px_4px_0px_rgba(0,0,0,0.30)]">
     <h2 class="text-right justify-start  bg-gradient-to-r from-[#0f103e] to-[#54ceff] bg-clip-text text-transparent text-[80px] font-bold">Nuestros Servicios</h2>
     <p class="text-right justify-center text-[#383838] text-[20px] font-medium px-6">Sumérgete en el mundo digital con nuestras soluciones de vanguardia. Cada uno de nuestros servicios está diseñado para llevar tu negocio al siguiente nivel</p>
-  </div>
-</div>
+  </div> -->

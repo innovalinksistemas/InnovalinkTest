@@ -30,37 +30,37 @@ import Solutions from "./Solutions.astro";
     src={flecha3}
     alt="flecha3"
   />
-<div class="sm:pt-[18%] 2xl:pt-[5%] ">
-  <div class="lg:h-screen flex-col flex  px-6 lg:px-12">
-    <div
-      class="z-10 lg:w-auto flex flex-col items-center lg:items-start text-center lg:text-left"
-    >
-      <div class="flex sm:space-x-32 2xl:space-x-96 justify-center items-center">
-        <div>
-          <h2
-            class="text-white drop-shadow-xl italic text-[140px] 2xl:text-[170px] font-bold font-['Monda'] 2xl:py-10 animate-pulse"
-          >
-            INNOVALINK
-          </h2>
-
-          <h3 class="text-white text-lg 2xl:text-[40px] pl-6 2xl:pt-8">
-            Desarrollo Web y Diseño Gráfico
-          </h3>
-          <p class="text-white text-lg lg:text-2xl pl-6 2xl:pt-4">
-            Transformamos ideas en soluciones <br />
-            tecnológicas innovadoras
-          </p>
-        </div>
-        <div>
-          <Image src={logo} alt="logo" />
+  <div class="pt-[45%] sm:pt-[20%] lg:pt-[20%] 2xl:pt-[10%] h-screen ">
+    <div class="flex flex-col px-6 lg:px-12">
+      <div class="z-10 flex flex-col items-center text-center">
+        <div class="flex flex-col xl:flex-row xl:space-x-32 items-center xl:justify-center space-y-8 xl:space-y-0">
+          <div>
+            <h2 class="text-white drop-shadow-xl italic text-3xl sm:text-4xl md:text-5xl lg:text-[120px] 2xl:text-[170px] font-bold font-['Monda'] py-6 animate-pulse">
+              INNOVALINK
+            </h2>
+  
+            <h3 class="text-white text-base sm:text-lg lg:text-[40px] pt-4">
+              Desarrollo Web y Diseño Gráfico
+            </h3>
+            <p class="text-white text-sm sm:text-base lg:text-2xl pt-2">
+              Transformamos ideas en soluciones <br />
+              tecnológicas innovadoras
+            </p>
+          </div>
+  
+          <div>
+            <Image src={logo} alt="logo" class="w-40 sm:w-52 lg:w-72" />
+          </div>
         </div>
       </div>
     </div>
   </div>
-</div>
- 
+  
+<div class="relative">
   <Banner1 />
   <AboutUs />
   <Services />
   <Solutions />
+</div>
+
 </div>

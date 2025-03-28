@@ -12,102 +12,74 @@ import pc from "../../public/pc.png";
 
 ---
 
-<div id="services" class="bg-white h-screen pb-4 lg:pt-8">
-
-  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 p-8">
-    <div class="">
-      <div class="flex justify-center my-6 ">
-        <div class=" w-[150px] h-[150px]  pt-4 pl-4  rounded-full origin-top-left  bg-gradient-to-r from-white to-[#d2d6d7] shadow-[0px_4px_4px_0px_rgba(0,0,0,0.25)]">
-          <div class="w-[120px] h-[120px] pt-5 pl-5 rounded-full origin-top-left bg-[radial-gradient(ellipse_50.00%_50.00%_at_50.00%_50.00%,_#54CEFF_0%,_#0F103E_100%)]">
-            <Image class="p-2" src={nave} alt="" />
-          </div>
+<div id="services" class="bg-white py-16 px-4 lg:px-16">
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12">
+    <!-- === CARD 1 === -->
+    <div class="relative flex flex-col items-center text-center">
+      <!-- Icono circular -->
+      <div class="w-[130px] h-[130px] sm:w-[150px] sm:h-[150px] bg-gradient-to-r from-white to-[#d2d6d7] rounded-full shadow-md flex items-center justify-center">
+        <div class="w-[100px] h-[100px] sm:w-[120px] sm:h-[120px] rounded-full bg-[radial-gradient(ellipse_50%_50%_at_50%_50%,_#54CEFF_0%,_#0F103E_100%)] flex items-center justify-center">
+          <Image class="p-2 w-[60px] h-[60px] sm:w-[70px] sm:h-[70px]" src={nave} alt="icono desarrollo web" />
         </div>
       </div>
-      <div>
-        <p class=" bg-[#0f103e] rounded-[20px] w-[250px] m-auto p-2 text-white text-center text-xl lg:text-3xl pt-4">
-          Desarrollo Web
-        </p>
-      </div>
-      <div class="m-4 h-[100px] mx-20">
-        <Image class="-z-0 absolute w-[360px] h-[400px]" src={marco} alt="marco" />
-        <h3 class="text-3xl text-center font-extrabold  px-18 pt-16 ">Diseño único
-          y adaptado </h3>
-          <p class="p-16 font-medium text-center">Diseñamos experiencias web únicas, modernas y completamente adaptadas a tus necesidades. </p>
 
+      <!-- Título -->
+      <p class="mt-6 bg-[#0f103e] text-white text-lg sm:text-xl lg:text-2xl font-semibold rounded-[20px] px-6 py-2 w-fit">
+        Desarrollo Web
+      </p>
+
+      <!-- Contenido -->
+      <div class="relative z-10 mt-8 px-4 pt-16 pb-8 bg-white rounded-lg shadow-lg">
+        <Image class="absolute -top-10 left-1/2 transform -translate-x-1/2 w-72 sm:w-80 -z-10 opacity-20" src={marco} alt="marco" />
+        <h3 class="text-xl sm:text-2xl font-extrabold">Diseño único y adaptado</h3>
+        <p class="mt-4 text-sm sm:text-base font-medium">
+          Diseñamos experiencias web únicas, modernas y completamente adaptadas a tus necesidades.
+        </p>
       </div>
     </div>
 
-    <!-- -------------------------------------------------------------------------------------- -->
-
-    <div class="">
-      <div class="flex justify-center my-6 ">
-        <div class=" w-[150px] h-[150px]  pt-4 pl-4  rounded-full origin-top-left  bg-gradient-to-r from-white to-[#d2d6d7] shadow-[0px_4px_4px_0px_rgba(0,0,0,0.25)]">
-          <div class="w-[120px] h-[120px] pt-5 pl-6 rounded-full origin-top-left bg-[radial-gradient(ellipse_50.00%_50.00%_at_50.00%_50.00%,_#54CEFF_0%,_#0F103E_100%)]">
-            <Image class="p-1" src={mundo} alt="" />
-          </div>
+    <!-- === CARD 2 === -->
+    <div class="relative flex flex-col items-center text-center">
+      <div class="w-[130px] h-[130px] sm:w-[150px] sm:h-[150px] bg-gradient-to-r from-white to-[#d2d6d7] rounded-full shadow-md flex items-center justify-center">
+        <div class="w-[100px] h-[100px] sm:w-[120px] sm:h-[120px] rounded-full bg-[radial-gradient(ellipse_50%_50%_at_50%_50%,_#54CEFF_0%,_#0F103E_100%)] flex items-center justify-center">
+          <Image class="p-2 w-[60px] h-[60px] sm:w-[70px] sm:h-[70px]" src={mundo} alt="icono API" />
         </div>
       </div>
-      <div>
-        <p class=" bg-[#0f103e] rounded-[20px] w-[250px] m-auto p-2 text-white text-center text-xl lg:text-3xl pt-4">
-          API Integrations
-        </p>
-      </div>
-      <div class="m-4 h-[100px] mx-20">
-        <Image class="-z-0 absolute w-[360px] h-[400px]" src={marco} alt="marco" />
-        <h3 class="text-3xl text-center font-extrabold  px-16 pt-16 ">Conectamos tus <br>
-          sistemas </h3>
-          <p class="p-14 font-medium text-center">Conectamos tus sistemas y plataformas de manera eficiente, optimizando tu flujo de trabajo con integraciones API rápidas y personalizadas </p>
 
+      <p class="mt-6 bg-[#0f103e] text-white text-lg sm:text-xl lg:text-2xl font-semibold rounded-[20px] px-6 py-2 w-fit">
+        API Integrations
+      </p>
+
+      <div class="relative z-10 mt-8 px-4 pt-16 pb-8 bg-white rounded-lg shadow-lg">
+        <Image class="absolute -top-10 left-1/2 transform -translate-x-1/2 w-72 sm:w-80 -z-10 opacity-20" src={marco} alt="marco" />
+        <h3 class="text-xl sm:text-2xl font-extrabold">Conectamos tus sistemas</h3>
+        <p class="mt-4 text-sm sm:text-base font-medium">
+          Conectamos tus plataformas de forma eficiente, optimizando tu flujo de trabajo con integraciones API personalizadas.
+        </p>
       </div>
     </div>
 
-    <!-- --------------------------------------------------------------------------------------------------- -->
-    <div class="">
-      <div class="flex justify-center my-6 ">
-        <div class=" w-[150px] h-[150px]  pt-4 pl-4  rounded-full origin-top-left  bg-gradient-to-r from-white to-[#d2d6d7] shadow-[0px_4px_4px_0px_rgba(0,0,0,0.25)]">
-          <div class="w-[120px] h-[120px] pt-6 pl-3 rounded-full origin-top-left bg-[radial-gradient(ellipse_50.00%_50.00%_at_50.00%_50.00%,_#54CEFF_0%,_#0F103E_100%)]">
-            <Image class="p-2" src={pc} alt="" />
-          </div>
+    <!-- === CARD 3 === -->
+    <div class="relative flex flex-col items-center text-center">
+      <div class="w-[130px] h-[130px] sm:w-[150px] sm:h-[150px] bg-gradient-to-r from-white to-[#d2d6d7] rounded-full shadow-md flex items-center justify-center">
+        <div class="w-[100px] h-[100px] sm:w-[120px] sm:h-[120px] rounded-full bg-[radial-gradient(ellipse_50%_50%_at_50%_50%,_#54CEFF_0%,_#0F103E_100%)] flex items-center justify-center">
+          <Image class="p-2 w-[60px] h-[60px] sm:w-[70px] sm:h-[70px]" src={pc} alt="icono consultoría" />
         </div>
       </div>
-      <div>
-        <p class=" bg-[#0f103e] rounded-[20px] w-[250px] m-auto p-2 text-white text-center text-xl lg:text-3xl pt-4">
-          Consultoría de IT
+
+      <p class="mt-6 bg-[#0f103e] text-white text-lg sm:text-xl lg:text-2xl font-semibold rounded-[20px] px-6 py-2 w-fit">
+        Consultoría de IT
+      </p>
+
+      <div class="relative z-10 mt-8 px-4 pt-16 pb-8 bg-white rounded-lg shadow-lg">
+        <Image class="absolute -top-10 left-1/2 transform -translate-x-1/2 w-72 sm:w-80 -z-10 opacity-20" src={marco} alt="marco" />
+        <h3 class="text-xl sm:text-2xl font-extrabold">Estrategia y eficiencia</h3>
+        <p class="mt-4 text-sm sm:text-base font-medium">
+          Optimizamos tu infraestructura tecnológica y alineamos tus procesos con las mejores prácticas de la industria.
         </p>
       </div>
-      <div class="m-4 h-[100px] mx-20">
-        <Image class="-z-0 absolute w-[360px] h-[400px]" src={marco} alt="marco" />
-        <h3 class="text-3xl text-center font-extrabold  px-16 pt-16 ">Estrategia y
-          eficiencia
-           tecnológica</h3>
-          <p class="p-16 font-medium text-center">Optimizamos tu infraestructura tecnológica y alineamos tus procesos con las mejores prácticas de la industria</p>
-
-      </div>
     </div>
-
-
   </div>
 </div>
 
-<script>
-  document.querySelectorAll(".openModalButton").forEach((button) => {
-    button.addEventListener("click", (event) => {
-      const target = event.target as HTMLElement;
-      const modalId = target
-        .closest("button")
-        ?.getAttribute("data-modal-target");
-      if (modalId) {
-        const modal = document.getElementById(modalId);
-        if (modal) modal.classList.remove("hidden");
-      }
-    });
-  });
 
-  document.querySelectorAll(".closeModalButton").forEach((button) => {
-    button.addEventListener("click", (event) => {
-      const target = event.target as HTMLElement;
-      const modal = target.closest(".fixed");
-      if (modal) modal.classList.add("hidden");
-    });
-  });
-</script>

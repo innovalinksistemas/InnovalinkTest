@@ -9,48 +9,57 @@ import { Image } from "astro:assets";
  import mail from "../../public/mail.png"
 ---
 
-<footer id="footer" class="relative h-[440px] bg-no-repeat bg-cover bg-center bg-[url('/public/fondo1.png')] shadow">
-
-
-    <div class="sm:flex sm:items-center sm:justify-between lg:flex lg:flex-row lg:justify-between mx-10">
-     
-      <div class="flex flex-col items-center text-white  mb-4 sm:mb-0">
-         <Image class="w-[350px]" src={logo} alt="Innova logo" />
-        <div>
-          <h5 class="my-2">Siguenos en Nuestas Redes Sociales</h5>
-          <div class="flex flex-row justify-center">
-            <Image class="h-10 w-10 mr-2" src={face} alt="Instagram logo" />
-            <Image class="h-10 w-10 mr-2" src={insta} alt="Instagram logo" />
-          </div>
-        </div>
-      </div>
-
-      <div class="flex flex-col text-sm font-medium text-center text-white ">
-        <div class="flex items-center justify-center m-2">
-          <Image class="w-8 m-2" src={mail} alt="" />
-          <a href="#" class="hover:underline ">info@innovalinkcr.com</a>
-        </div>
-        <div class="flex items-center justify-center m-2">
-          <Image class="w-8 m-2" src={whatsapp} alt="" />
-          <h3>+506 0000000</h3>
-        </div>
-        <div class="flex flex-col  items-center justify-center m-2">
-          <div class="flex flex-row justify-center items-center ">
-            <Image class="w-8 m-2" src={reloj} alt="" />
-            <h3>Horario de Atencion</h3>
-          </div>
-          <p>
-            Lunes a Viernes 8:00 am a 6:00 pm
-            <br>
-            Sabado y Domingo 10:00 am a 4:00 pm
-          </p>
+<footer id="footer" class="relative bg-[url('/public/fondo1.png')] bg-no-repeat bg-cover bg-center shadow px-6 py-12">
+  <div class="max-w-7xl mx-auto flex flex-col lg:flex-row justify-between items-center gap-12">
+    <!-- Logo y redes -->
+    <div class="flex flex-col items-center text-white">
+      <Image class="w-64 sm:w-72 lg:w-[350px]" src={logo} alt="Innova logo" />
+      <div class="mt-4 text-center">
+        <h5 class="text-sm sm:text-base mb-2">Síguenos en nuestras redes sociales</h5>
+        <div class="flex justify-center gap-4">
+          <Image class="h-8 w-8 sm:h-10 sm:w-10" src={face} alt="Facebook" />
+          <Image class="h-8 w-8 sm:h-10 sm:w-10" src={insta} alt="Instagram" />
         </div>
       </div>
     </div>
 
+    <!-- Info de contacto -->
+    <div class="flex flex-col text-white text-center text-sm sm:text-base font-medium gap-4">
+      <div class="flex items-center justify-center gap-2">
+        <Image class="w-6 sm:w-8" src={mail} alt="mail" />
+        <a href="mailto:info@innovalinkcr.com" class="hover:underline">info@innovalinkcr.com</a>
+      </div>
 
-    <span class="block text-sm text-gray-500 text-center dark:text-gray-400 mt-8">
-      © 2025 <a href="#" class="hover:underline">Innovalinkcr</a>. Todos los derechos reservados.
-    </span>
+      <div class="flex items-center justify-center gap-2">
+        <Image class="w-6 sm:w-8" src={whatsapp} alt="whatsapp" />
+        <p>+506 0000000</p>
+      </div>
 
+      <div class="flex flex-col items-center">
+        <div class="flex items-center justify-center gap-2 mb-1">
+          <Image class="w-6 sm:w-8" src={reloj} alt="horario" />
+          <p class="font-semibold">Horario de Atención</p>
+        </div>
+        <p>
+          Lunes a Viernes: 8:00 am - 6:00 pm <br />
+          Sábado y Domingo: 10:00 am - 4:00 pm
+        </p>
+      </div>
+    </div>
+    <!-- Enlace a mesa de ayuda -->
+<div class="flex items-center justify-center mt-6">
+  <a
+    href="/mesa-de-ayuda"
+    class="bg-[#0099CD] hover:bg-[#007da9] text-white font-semibold py-2 px-6 rounded-full transition duration-300"
+  >
+    Ir a la Mesa de Ayuda
+  </a>
+</div>
+
+  </div>
+
+
+  <span class="block text-xs sm:text-sm text-gray-300 text-center mt-10">
+    © 2025 <a href="#" class="hover:underline">Innovalinkcr</a>. Todos los derechos reservados.
+  </span>
 </footer>

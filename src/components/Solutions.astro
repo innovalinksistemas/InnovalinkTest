@@ -10,74 +10,64 @@ import flechasolu from "../../public/flechasolu.png";
 
 
 ---
-<div id="solutions" class="h-[200px] bg-no-repeat bg-cover bg-center bg-[url('/public/fondo1.png')] p-4">
-
-  <div class="text-white p-4 lg:max-w-4xl lg:mx-auto mt-8">
-    <p class="pb-4 text-center text-xl font-bold lg:text-6xl uppercase">Nuestras soluciones</p>
+<div id="solutions" class="bg-[url('/public/fondo1.png')] bg-no-repeat bg-cover bg-center py-12 px-4">
+  <div class="text-white text-center max-w-6xl mx-auto">
+    <p class="text-xl sm:text-3xl lg:text-6xl font-bold uppercase">Nuestras soluciones</p>
   </div>
-
 </div>
 
-
-<div id="solutions" class="p-4 bg-white h-screen ">
-
-  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 p-6 mt-32">
-
-    <div class=" border bg-white border-black rounded-lg shadow-lg mx-auto w-[350px] h-[400px]">
-      <div class=" ">
-        <Image class="w-32 mx-auto pt-10" src={pv} alt="" />
-        <p class="text-Black text-center text-xl lg:text-4xl pt-4">
-          InnovaPos
-        </p>
+<div class="bg-white py-16 px-4">
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 max-w-7xl mx-auto">
+    <!-- === CARD 1 === -->
+    <div class="bg-white border border-black rounded-lg shadow-lg w-full max-w-[350px] h-auto mx-auto flex flex-col justify-between">
+      <div class="pt-10">
+        <Image class="w-28 mx-auto" src={pv} alt="InnovaPos" />
+        <p class="text-black text-center text-xl lg:text-3xl pt-4 font-semibold">InnovaPos</p>
       </div>
-      <div class="px-6 py-6 text-center ">
+      <div class="px-6 py-6 text-center text-sm sm:text-base">
         <p>
           Sistema de punto de venta que agiliza la facturación para restaurantes, tiendas y puestos de comida rápida.
         </p>
       </div>
-      <div class="bg-neutral-200 rounded-[50px] w-[238px] h-[45px]  mx-auto p-2">
-        <a href="/" class="text-center font-bold pl-7 ">Más información</a>
-        <Image class="w-8 float-right " src={flechasolu} alt="" />
+      <div class="bg-neutral-200 rounded-full w-[238px] h-[45px] mx-auto mb-6 p-2 flex items-center justify-between px-4">
+        <a href="/" class="text-sm sm:text-base font-bold">Más información</a>
+        <Image class="w-6" src={flechasolu} alt="flecha" />
       </div>
-    
     </div>
 
-    <div class=" border bg-white border-black rounded-lg shadow-lg mx-auto w-[350px] h-[400px]">
-      <div class=" ">
-        <Image class="w-20 mx-auto pt-10" src={res} alt="" />
-        <p class="text-Black text-center text-xl lg:text-4xl pt-4">
-          InnovaRes
-        </p>
+    <!-- === CARD 2 === -->
+    <div class="bg-white border border-black rounded-lg shadow-lg w-full max-w-[350px] h-auto mx-auto flex flex-col justify-between">
+      <div class="pt-10">
+        <Image class="w-24 mx-auto" src={res} alt="InnovaRes" />
+        <p class="text-black text-center text-xl lg:text-3xl pt-4 font-semibold">InnovaRes</p>
       </div>
-      <div class="px-6 py-6 text-center ">
+      <div class="px-6 py-6 text-center text-sm sm:text-base">
         <p>
           Plataforma para administrar reservas de clientes en tiempo real, optimizando el orden y la organización.
         </p>
       </div>
-      <div class="bg-neutral-200 rounded-[50px] w-[238px] h-[45px]  mx-auto p-2">
-        <a href="/" class="text-center font-bold pl-7 ">Más información</a>
-        <Image class="w-8 float-right " src={flechasolu} alt="" />
+      <div class="bg-neutral-200 rounded-full w-[238px] h-[45px] mx-auto mb-6 p-2 flex items-center justify-between px-4">
+        <a href="/" class="text-sm sm:text-base font-bold">Más información</a>
+        <Image class="w-6" src={flechasolu} alt="flecha" />
       </div>
-    
     </div>
 
-    <div class=" border bg-white border-black rounded-lg shadow-lg mx-auto w-[350px] h-[400px]">
-      <div class=" ">
-        <Image class="w-12 mx-auto pt-10" src={time} alt="" />
-        <p class="text-Black text-center text-xl lg:text-4xl pt-4">
-          InnovaTime
-        </p>
+    <!-- === CARD 3 === -->
+    <div class="bg-white border border-black rounded-lg shadow-lg w-full max-w-[350px] h-auto mx-auto flex flex-col justify-between">
+      <div class="pt-10">
+        <Image class="w-20 mx-auto" src={time} alt="InnovaTime" />
+        <p class="text-black text-center text-xl lg:text-3xl pt-4 font-semibold">InnovaTime</p>
       </div>
-      <div class="px-6 py-6 text-center ">
+      <div class="px-6 py-6 text-center text-sm sm:text-base">
         <p>
           Herramienta de gestión laboral que organiza horarios, turnos, ausencias y vacaciones, con cálculos automáticos según normativa.
         </p>
       </div>
-      <div class="bg-neutral-200 rounded-[50px] w-[238px] h-[45px]  mx-auto p-2">
-        <a href="/" class="text-center font-bold pl-7 ">Más información</a>
-        <Image class="w-8 float-right " src={flechasolu} alt="" />
+      <div class="bg-neutral-200 rounded-full w-[238px] h-[45px] mx-auto mb-6 p-2 flex items-center justify-between px-4">
+        <a href="/" class="text-sm sm:text-base font-bold">Más información</a>
+        <Image class="w-6" src={flechasolu} alt="flecha" />
       </div>
-    
     </div>
   </div>
 </div>
+

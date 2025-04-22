@@ -9,7 +9,8 @@ export default defineConfig({
   image: {
     service: passthroughImageService(),
   },
-
+  output: 'server',
+  site: 'https://innovalinkcr.com',
   integrations: [tailwind()],
   adapter: netlify()
 });

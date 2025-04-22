@@ -12,5 +12,7 @@ export default defineConfig({
   output: 'server',
   site: 'https://innovalinkcr.com',
   integrations: [tailwind()],
-  adapter: netlify()
+  adapter: netlify({
+    cacheOnDemandPages: true,
+  }),
 });

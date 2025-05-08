@@ -2,7 +2,10 @@
 import Landing from "@components/Landing.astro";
 import Footer from "@components/Footer.astro";
 import { SEO } from "astro-seo";
-
+import Banner1 from "../components/Banner1.astro";
+import AboutUs from "@components/AboutUs.astro";
+import Services from "@components/Services.astro";
+import Solutions from "@components/Solutions.astro";
 ---
 
 <!doctype html>
@@ -43,10 +46,14 @@ import { SEO } from "astro-seo";
   <meta name="google-site-verification" content="h6xPrSoP0dXKaYQhcYapwGqgAADVQYQF9Bbr084gqps" />
 </head>
 
-  <body>
-    <canvas id="cnv" class="absolute top-0 left-0 w-screen h-screen"></canvas>
+  <body class="overflow-x-hidden">
+    <canvas id="cnv" class="absolute top-0 left-0 w-screen h-screen "></canvas>
     <div class="">
       <Landing />
+      <Banner1 />
+      <AboutUs />
+      <Services />
+      <Solutions />
       <Footer/>
       <slot />
     </div>

@@ -1,0 +1,36 @@
+---
+import { Image } from "astro:assets";
+import laptop from "../assets/laptop.png"; // reemplaza con tu imagen del dashboard/laptop
+---
+
+<section class="relative w-full h-[90vh] bg-cover bg-center bg-no-repeat bg-[url('/src/assets/office-blur.jpg')]">
+  <!-- Overlay oscuro -->
+  <div class="absolute inset-0 bg-black/50 z-0"></div>
+
+  <!-- Contenido principal -->
+  <div class="relative z-10 flex flex-col lg:flex-row items-center justify-between h-full px-6 md:px-16">
+    
+    <!-- Texto a la izquierda -->
+    <div class="text-white max-w-xl text-center lg:text-left space-y-6 mt-20 lg:mt-0">
+      <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight">
+        Dejá de apagar fuegos y empezá a tomar decisiones con datos reales
+      </h1>
+      <p class="text-lg">
+        Asigná tickets, monitoreá KPIs y optimizá el rendimiento de tu equipo desde una sola plataforma.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+        <a href="#" class="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-md transition">
+          Solicitar demo gratuita
+        </a>
+        <a href="#features" class="bg-white text-black hover:bg-gray-100 font-semibold px-6 py-3 rounded-md transition">
+          Ver funcionalidades
+        </a>
+      </div>
+    </div>
+
+    <!-- Imagen a la derecha -->
+    <div class="hidden lg:block mt-10 lg:mt-0 max-w-[550px]">
+      <Image src={laptop} alt="Dashboard" class="w-full h-auto rounded-xl shadow-xl" />
+    </div>
+  </div>
+</section>

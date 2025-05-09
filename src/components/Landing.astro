@@ -1,67 +1,34 @@
 ---
 import { Image } from "astro:assets";
-import flecha1 from "../assets/flecha1.png";
-import flecha2 from "../assets/flecha2.png";
-import flecha3 from "../assets/flecha3.png";
-
-
-import particula1 from "../../public/particula1.png";
-import logo from "../assets/logoinnova.png";
-
+import logo from "../assets/logo-innovalink.png";
 import Header from "./Header.astro";
-import Repair from "./Repair.astro";
 import Banner1 from "./Banner1.astro";
 import AboutUs from "./AboutUs.astro";
-import Technologies from "./Technologies.astro";
 import Services from "./Services.astro";
 import Solutions from "./Solutions.astro";
+import HeroHelpdeks from "./HeroHelpdeks.astro";
 ---
 
 <Header />
 
 <div class="flex flex-col">
-  <Image class="h-auto w-auto absolute top-56" src={flecha1} alt="flecha1" />
-  <Image
-    class="h-auto w-auto absolute top-[650px]"
-    src={flecha2}
-    alt="flecha2"
-  />
-  <Image
-    class="h-auto w-auto absolute top-[570px] right-0"
-    src={flecha3}
-    alt="flecha3"
-  />
-  <div class="pt-[45%] sm:pt-[20%] lg:pt-[20%] 2xl:pt-[10%] h-screen ">
-    <div class="flex flex-col px-6 lg:px-12">
-      <div class="z-10 flex flex-col items-center text-center">
-        <div class="flex flex-col xl:flex-row xl:space-x-32 items-center xl:justify-center space-y-8 xl:space-y-0">
-          <div>
-            <h2 class="text-white drop-shadow-xl italic text-3xl sm:text-4xl md:text-5xl lg:text-[120px] 2xl:text-[170px] font-bold font-['Monda'] py-6 animate-pulse">
-              INNOVALINK
-            </h2>
-  
-            <h3 class="text-white text-base sm:text-lg lg:text-[40px] pt-4">
-              Desarrollo Web y Diseño Gráfico
-            </h3>
-            <p class="text-white text-sm sm:text-base lg:text-2xl pt-2">
-              Transformamos ideas en soluciones <br />
-              tecnológicas innovadoras
-            </p>
-          </div>
-  
-          <div>
-            <Image src={logo} alt="logo" class="w-40 sm:w-52 lg:w-72" />
-          </div>
+  <div class="h-screen flex items-center justify-center px-6 lg:px-12 pt-[1%] sm:pt-[20%] lg:pt-[20%] 2xl:pt-[1%]">
+    <div class="z-10 flex flex-col xl:flex-row xl:space-x-32 items-center text-center">
+      <div class="flex flex-col items-center">
+        <Image src={logo} alt="logo" class="sm:w-[45rem] sm:h-[30em]" />
+        <h3 class="text-white text-base sm:text-lg lg:text-[40px] mt-4">
+          INNOVATE TECHNOLOGY SOLUTIONS
+        </h3>
+        <div class="pt-12">
+          <button class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-6 rounded-xl transition duration-300">
+            Agenda con nosotros
+          </button>
         </div>
+  
+        
       </div>
     </div>
   </div>
-  
-<div class="relative">
-  <Banner1 />
-  <AboutUs />
-  <Services />
-  <Solutions />
-</div>
+
 
 </div>

@@ -2,34 +2,44 @@
 import Landing from "@components/Landing.astro";
 import Footer from "@components/Footer.astro";
 import { SEO } from "astro-seo";
-
+import Banner1 from "../components/Banner1.astro";
+import AboutUs from "@components/AboutUs.astro";
+import Services from "@components/Services.astro";
+import Solutions from "@components/Solutions.astro";
 ---
 
 <!doctype html>
 <html lang="es">
+  <head>
+    <!-- Codificación para español -->
+    <meta charset="UTF-8" />
 
-<head>
-  <!-- Codificación para español -->
-  <meta charset="UTF-8" />
+    <SEO
+      title="InnovaLink | Desarrollo Web y Diseño Gráfico"
+      description="Transformamos ideas en soluciones digitales innovadoras. Expertos en desarrollo web, diseño gráfico y estrategias tecnológicas."
+      openGraph={{
+        basic: {
+          title: "InnovaLink | Desarrollo Web y Diseño Gráfico",
+          type: "website",
+          image: "/assets/logo.png",
+        },
+      }}
+      extend={{
+        link: [{ rel: "icon", href: "/icon-innova.svg" }],
+      }}
+    />
 
-  <SEO
-    title="InnovaLink | Desarrollo Web y Diseño Gráfico"
-    description="Transformamos ideas en soluciones digitales innovadoras. Expertos en desarrollo web, diseño gráfico y estrategias tecnológicas."
-    openGraph={{
-      basic: {
-        title: "InnovaLink | Desarrollo Web y Diseño Gráfico",
-        type: "website",
-        image: "/assets/logo.png",
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-M973RHD2K1"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
       }
-    }}
-   
-    extend={{
-      link: [
-        { rel: "icon", href: "/icon-innova.svg" }
-      ],
-    }}
-  />
+      gtag("js", new Date());
 
+<<<<<<< HEAD
   <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-M973RHD2K1"></script>
 <script>
@@ -44,57 +54,73 @@ import { SEO } from "astro-seo";
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Monda:wght@400..700&family=Playwrite+SK:wght@100..400&family=Radley:ital@0;1&display=swap" rel="stylesheet" />
+=======
+      gtag("config", "G-M973RHD2K1");
+    </script>
+>>>>>>> fd7a946c396f80a0a7134f84c9b78b43d7ab975e
 
-  <!-- Fondo animado -->
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Monda:wght@400..700&family=Playwrite+SK:wght@100..400&family=Radley:ital@0;1&display=swap"
+      rel="stylesheet"
+    />
 
+    <!-- Fondo animado -->
 
-  <meta name="viewport" content="width=device-width" />
-  <meta name="msvalidate.01" content="43B08B99FB61DC69AFDF166722CBAF4A" />
-  <meta name="google-site-verification" content="h6xPrSoP0dXKaYQhcYapwGqgAADVQYQF9Bbr084gqps" />
-</head>
+    <meta name="viewport" content="width=device-width" />
+    <meta name="msvalidate.01" content="43B08B99FB61DC69AFDF166722CBAF4A" />
+    <meta
+      name="google-site-verification"
+      content="h6xPrSoP0dXKaYQhcYapwGqgAADVQYQF9Bbr084gqps"
+    />
+  </head>
 
-  <body>
+  <body class="overflow-x-hidden">
     <canvas id="cnv" class="absolute top-0 left-0 w-screen h-screen"></canvas>
     <div class="">
       <Landing />
-      <Footer/>
+      <Banner1 />
+      <AboutUs />
+      <Services />
+      <Solutions />
+      <Footer />
       <slot />
     </div>
-	
   </body>
 </html>
 
 <script>
   //Get context and screen size;
-var ctx = cnv.getContext("2d");
-var W = window.innerWidth;
-var H = window.innerHeight;
+  var ctx = cnv.getContext("2d");
+  var W = window.innerWidth;
+  var H = window.innerHeight;
 
-//Set Canvas and Background Color;
-cnv.width = W;
-cnv.height = H;
-ctx.fillStyle = "#112";
-ctx.fillRect(0, 0, W, H);
+  //Set Canvas and Background Color;
+  cnv.width = W;
+  cnv.height = H;
+  ctx.fillStyle = "#112";
+  ctx.fillRect(0, 0, W, H);
 
-//Glow effect;
-ctx.shadowBlur = 10;
-ctx.shadowColor = "white";
+  //Glow effect;
+  ctx.shadowBlur = 10;
+  ctx.shadowColor = "white";
 
-function animate() {
-  //Random position and size of stars;
-  let x = W * Math.random();
-  let y = H * Math.random();
-  let r = 2.5 * Math.random();
+  function animate() {
+    //Random position and size of stars;
+    let x = W * Math.random();
+    let y = H * Math.random();
+    let r = 2.5 * Math.random();
 
-  //Draw the stars;
-  ctx.beginPath();
-  ctx.fillStyle = "white";
-  ctx.arc(x, y, r, 0, Math.PI * 2);
-  ctx.fill();
+    //Draw the stars;
+    ctx.beginPath();
+    ctx.fillStyle = "white";
+    ctx.arc(x, y, r, 0, Math.PI * 2);
+    ctx.fill();
 
-  //Using setTimeout instead of window.requestAnimationFrame for slower speed... window.requestAnimationFrame is approximately equal to setTimeout(func, 17);
-  setTimeout(animate, 100);
-}
-animate();
-
+    //Using setTimeout instead of window.requestAnimationFrame for slower speed... window.requestAnimationFrame is approximately equal to setTimeout(func, 17);
+    setTimeout(animate, 100);
+  }
+  animate();
 </script>

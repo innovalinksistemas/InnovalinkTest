@@ -16,8 +16,11 @@ import HeroHelpdeks from "./HeroHelpdeks.astro";
 // import servicio3 from "../../src/images/servicio3.jpg";
 ---
 
-<div id="aboutUs" class="bg-no-repeat bg-cover bg-center bg-[url('/fondo1.png')] p-4">
+<div>
+  <HeroHelpdeks />
+</div>
 
+<div id="aboutUs" class=" bg-gradient-to-br from-sky-950 to-blue-800  p-4">
   <div class="text-white p-4 lg:max-w-4xl lg:mx-auto ">
     <p class="pb-4 text-center text-xl font-bold lg:text-5xl">Quienes Somos</p>
     <div class="max-w-xs mx-auto lg:max-w-full">
@@ -34,11 +37,9 @@ import HeroHelpdeks from "./HeroHelpdeks.astro";
   </div>
 
 </div>
-<div class="pt-2">
-  <HeroHelpdeks />
-</div>
+
 <div class="bg-white">
-  <p class="pb-4 text-center text-xl lg:text-4xl pt-[156px]">¿Qué ofrecemos?</p>
+  <p class="pb-4 text-center text-xl lg:text-4xl pt-[96px]">¿Qué ofrecemos?</p>
 
 
   <Image class="w-80 relative top-2" src={flecha1} alt="flecha1" />
@@ -49,42 +50,47 @@ import HeroHelpdeks from "./HeroHelpdeks.astro";
 
   <div class="bg-white px-4 py-8">
     <div
-      class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl place-items-center mx-auto"
-    >
+      class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl place-items-center mx-auto">
 
-      <div class="bg-white rounded-xl shadow-md w-[300px] h-[350px]">
-        <div class="text-center  ">
-          <h2 class="text-xl font-semibold text-white rounded-t-xl  bg-gradient-to-r from-[#0f103e] to-[#54ceff] p-4 ">
+      <div class="bg-[#0f103e] rounded-xl shadow-md w-[350px] h-[420px]">
+        <div class="text-center flex flex-col justify-center items-center">
+          <div>
+            <Image class="w-42 mx-4 mt-2 filter drop-shadow-lg brightness-125" src={layer3} alt=""/>
+          </div>
+          <h2 class="text-xl font-semibold text-white rounded-t-xl  bg-[#0f103e] p-4 ">
             <strong>Creación de Páginas Web Modernas y Funcionales:</strong>
           </h2>
-          <p class="text-sm text-gray-500 mt-2 py-4 px-6">
+          <p class="text-sm text-gray-300 mt-2 py-2 px-6">
             Desarrollamos sitios web a la medida, fusionando creatividad y tecnología de última generación. Cada página que diseñamos está pensada para ofrecer experiencias únicas e interactivas, que no solo capturan la atención de los usuarios, sino que también cumplen con los más altos estándares de funcionalidad y rendimiento.
           </p>
-          <Image class="w-8 float-right mx-4" src={layer3} alt=""/>
         </div>
       </div>
 
-      <div class="bg-white rounded-xl shadow-md w-[300px] h-[350px]">
-        <div class="text-center">
-          <h2 class="text-xl font-semibold text-white rounded-t-xl  bg-gradient-to-r from-[#0f103e] to-[#54ceff] p-4 ">
+      <div class="bg-[#0f103e] rounded-xl shadow-md w-[350px] h-[420px]">
+        <div class="text-center flex flex-col justify-center items-center">
+          <div>
+            <Image class="w-42 float-right mt-7 mx-4" src={layer1} alt=""/>
+          </div>
+          <h2 class="text-xl font-semibold text-white rounded-t-xl   p-4 ">
             <strong>SolucionesPersonalizadas:</strong>
           </h2>
-          <p class="text-sm text-gray-500 mt-2 py-4 px-6">
+          <p class="text-sm text-gray-300 mt-2 py-4 px-6">
             Nos sumergimos en las necesidades únicas de cada cliente para diseñar soluciones tecnológicas a medida que potencian su crecimiento. Proponemos herramientas innovadoras y estrategias adaptadas, que permiten a las empresas alcanzar su máximo potencial de manera eficiente y escalable.
           </p>
-          <Image class="w-8 float-right mt-7 mx-4" src={layer1} alt=""/>
         </div>
       </div>
 
-      <div class="bg-white rounded-xl shadow-md w-[300px] h-[350px]">
-        <div class=" text-center">
-          <h2 class="text-xl font-semibold text-white rounded-t-xl  bg-gradient-to-r from-[#0f103e] to-[#54ceff] p-4 ">
+      <div class="bg-[#0f103e] rounded-xl shadow-md w-[350px] h-[420px]">
+        <div class=" text-center flex flex-col justify-center items-center">
+          <div>
+            <Image class="w-42 float-right mx-4" src={layer2} alt=""/>
+          </div>
+          <h2 class="text-xl font-semibold text-white rounded-t-xl   p-4 ">
             <strong>Asesoría <br> Estratégica:</strong>
           </h2>
-          <p class="text-sm text-gray-500 mt-2 py-4 px-6">
+          <p class="text-sm text-gray-300 mt-2 py-4 px-6">
             No solo desarrollamos, sino que acompañamos a las empresas en su viaje digital, guiándolas hacia las mejores prácticas y estrategias digitales. Nuestro enfoque consultivo asegura que cada decisión esté alineada con sus objetivos a largo plazo, optimizando recursos y maximizando resultados.
           </p>
-          <Image class="w-8 float-right mx-4" src={layer2} alt=""/>
         </div>
       </div>
 

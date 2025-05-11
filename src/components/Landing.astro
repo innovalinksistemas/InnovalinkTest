@@ -12,19 +12,27 @@ import HeroHelpdeks from "./HeroHelpdeks.astro";
 <Header />
 
 <div class="flex flex-col">
-  <div class="h-screen flex items-center justify-center px-6 lg:px-12 pt-[1%] sm:pt-[20%] lg:pt-[20%] 2xl:pt-[1%]">
-    <div class="z-10 flex flex-col xl:flex-row xl:space-x-32 items-center text-center">
-      <div class="flex flex-col items-center">
-        <Image src={logo} alt="logo" class="sm:w-[45rem] sm:h-[30em]" />
-        <h3 class="text-white text-base sm:text-lg lg:text-[40px] mt-4">
-          INNOVATE TECHNOLOGY SOLUTIONS
+  <div class="h-screen flex items-center justify-center px-6  pt-[1%]  2xl:pt-[1%]">
+    <div class="z-10 flex flex-col xl:flex-row xl:space-x-32  text-center">
+      <div class="flex flex-col items-center top-[100px]">
+        <Image src={logo} alt="logo" class="sm:w-[45rem] sha " />
+        <h3 class="text-white text-pretty text-4xl sm:text-lg lg:text-[40px] mt-4">
+          SOLUCIONES TECNOLÓGICAS INNOVADORAS
         </h3>
-        <div class="pt-12">
-          <button class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-6 rounded-xl transition duration-300">
-            Agenda con nosotros
-          </button>
+        <div class="pt-12 ">
+          <a href="#services">
+            <button class="bg-transparent border-2 border-white  hover:bg-blue-600 text-white font-bold py-4 m-2 uppercase px-6 rounded-xl transition duration-300">
+              Ver Servicios
+            </button>
+          </a>
+
+          <a href="https://wa.me/message/PSDJXRERKMOJI1">
+            <button class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 m-2 uppercase px-6 rounded-xl transition duration-300">
+              Agenda con nosotros
+            </button>
+          </a>
+
         </div>
-  
         
       </div>
     </div>

@@ -3,36 +3,33 @@ import { Image } from "astro:assets";
 import logo from "../assets/res/Picture1.png";
 ---
 
-<nav class="fixed top-0 left-0 w-screen bg-transparent bg-opacity-90 px-4 flex items-center justify-between z-10 transition-all ease-in-out duration-300">
+<nav class="fixed top-0 left-0 w-screen bg-transparent bg-opacity-90 px-4 flex items-center text-center justify-between sm:justify-around z-10 transition-all ease-in-out duration-300">
 
-  <a href="https://wa.me/message/PSDJXRERKMOJI1">
+  <!-- <a href="https://wa.me/message/PSDJXRERKMOJI1">
     <div class="flex items-center bg-[#0099CD] h-16 px-4 rounded-b-lg text-white text-lg font-bold">
       <h1 class="ml-2">Agenda con Nosotros</h1>
     </div>
-  </a>
+  </a> -->
 
-  <div class="flex items-center text-white text-lg font-bold pr-4 animate-pulse ">
-   
-  </div>
 
-  <div class="hidden md:flex items-center space-x-6">
-    <a href="#" class="text-white hover:text-blue-200">Inicio</a>
-    <a href="#aboutUs" class="text-white hover:text-blue-200">Servicios</a>
+
+  <div class="hidden md:flex items-center justify-center space-x-6 pt-6">
+    <a href="/" class="text-white hover:text-blue-200">Inicio</a>
+    <a href="#services" class="text-white hover:text-blue-200">Servicios</a>
     <a href="#technologies" class="text-white hover:text-blue-200">Productos</a>
-    <a href="#services" class="text-white hover:text-blue-200">Nosotros</a>
+    <a href="#aboutUs" class="text-white hover:text-blue-200">Nosotros</a>
     <a href="#solutions" class="text-white hover:text-blue-200">Contacto</a>
-
   </div>
 
-  <div class="flex items-center text-white text-lg font-bold pr-4 animate-pulse ">
-    <Image class="h-8 w-auto" src={logo} alt="Innova logo" />
+  <div class="flex items-center text-white text-2xl sm:text-2xl font-bold pr-4 animate-pulse pt-6 ">
+    <Image class="h-10 sm:h-10 w-1/2 sm:w-auto" src={logo} alt="Innova logo" />
     <h1 class="mr-4">Innovalink</h1>
   </div>
 
   <div class="md:hidden">
-    <button id="menu-button" class="text-white focus:outline-none">
+    <button id="menu-button" class="text-white focus:outline-none pt-6">
       <svg
-        class="w-6 h-6"
+        class="w-10 h-10"
         fill="none"
         stroke="currentColor"
         viewBox="0 0 24 24"
@@ -52,10 +49,10 @@ import logo from "../assets/res/Picture1.png";
   id="mobile-menu"
   class="md:hidden hidden fixed top-16 left-0 w-full bg-blue-500/90 z-40 shadow-lg"
 >
-  <a href="#" class="block px-4 py-3 text-white hover:bg-blue-700">Inicio</a>
-  <a href="#aboutUs" class="block px-4 py-3 text-white hover:bg-blue-700">Servicios</a>
+  <a href="/" class="block px-4 py-3 text-white hover:bg-blue-700">Inicio</a>
+  <a href="#services" class="block px-4 py-3 text-white hover:bg-blue-700">Servicios</a>
   <a href="#technologies" class="block px-4 py-3 text-white hover:bg-blue-700">Productos</a>
-  <a href="#services" class="block px-4 py-3 text-white hover:bg-blue-700">Nosotros</a>
+  <a href="#aboutUs" class="block px-4 py-3 text-white hover:bg-blue-700">Nosotros</a>
   <a href="#solutions" class="block px-4 py-3 text-white hover:bg-blue-700">Contacto</a>
 </div>
 

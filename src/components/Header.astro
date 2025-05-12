@@ -3,7 +3,7 @@ import { Image } from "astro:assets";
 import logo from "../assets/res/Picture1.png";
 ---
 
-<nav class="fixed top-0 left-0 w-screen bg-transparent bg-opacity-90 px-4 flex items-center text-center justify-between sm:justify-around z-10 transition-all ease-in-out duration-300">
+<nav id="main-nav" class="fixed top-0 left-0 w-screen px-4 flex items-center text-center justify-between sm:justify-around z-50 transition-all ease-in-out duration-300 bg-transparent">
 
   <!-- <a href="https://wa.me/message/PSDJXRERKMOJI1">
     <div class="flex items-center bg-[#0099CD] h-16 px-4 rounded-b-lg text-white text-lg font-bold">
@@ -22,7 +22,7 @@ import logo from "../assets/res/Picture1.png";
   </div>
 
   <div class="flex items-center text-white text-2xl sm:text-2xl font-bold pr-4 animate-pulse pt-6 ">
-    <Image class="h-10 sm:h-10 w-1/2 sm:w-auto" src={logo} alt="Innova logo" />
+    <Image class="h-8 w-8 sm:h-10  sm:w-auto" src={logo} alt="Innova logo" />
     <h1 class="mr-4">Innovalink</h1>
   </div>
 
@@ -59,9 +59,24 @@ import logo from "../assets/res/Picture1.png";
 <script>
   const menuButton = document.getElementById("menu-button");
   const mobileMenu = document.getElementById("mobile-menu");
+  const nav = document.getElementById("main-nav");
 
   menuButton.addEventListener("click", () => {
     mobileMenu.classList.toggle("hidden");
   });
+
+  // Scroll listener para cambiar estilo del navbar
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 30) {
+      nav.classList.add("bg-[#0f103e]/90", "shadow-md", "py-2");
+      nav.classList.remove("bg-transparent", "py-6");
+    } else {
+      nav.classList.remove("bg-[#0f103e]/90", "shadow-md", "py-2");
+      nav.classList.add("bg-transparent", "py-6");
+    }
+  });
+
+  // Set clase inicial
+  nav.classList.add("py-6");
   
 </script>

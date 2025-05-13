@@ -39,13 +39,13 @@ import HeroHelpdeks from "./HeroHelpdeks.astro";
 </div>
 
 <div class="bg-white">
-  <p class="pb-4 text-center text-xl lg:text-4xl pt-[96px]">¿Qué ofrecemos?</p>
+  <p class="sm:pb-4 text-center text-4xl lg:text-4xl pt-4 sm:pt-[96px]">¿Qué ofrecemos?</p>
 
 
-  <Image class="w-80 relative top-2" src={flecha1} alt="flecha1" />
-  <Image class="w-80 relative -top-8" src={flecha2} alt="flecha2" />
+  <Image class=" hidden sm:block  w-80 relative top-2" src={flecha1} alt="flecha1" />
+  <Image class="  hidden sm:block w-80 relative -top-8" src={flecha2} alt="flecha2" />
 
-  <Image class="w-80 relative -top-8 float-right rotate-180" src={flecha1} alt="flecha1" />
+  <Image class=" hidden sm:block w-80 relative -top-8 float-right rotate-180" src={flecha1} alt="flecha1" />
 
 
   <div class="bg-white px-4 py-8">
@@ -55,7 +55,7 @@ import HeroHelpdeks from "./HeroHelpdeks.astro";
       <div class="bg-[#0f103e] rounded-xl shadow-md w-[350px] h-[420px]">
         <div class="text-center flex flex-col justify-center items-center">
           <div>
-            <Image class="w-42 mx-4 mt-2 filter drop-shadow-lg brightness-125" src={layer3} alt=""/>
+            <Image class="w-42 mx-4 mt-2 pt-6 filter drop-shadow-lg brightness-125" src={layer3} alt=""/>
           </div>
           <h2 class="text-xl font-semibold text-white rounded-t-xl  bg-[#0f103e] p-4 ">
             <strong>Creación de Páginas Web Modernas y Funcionales:</strong>
@@ -69,10 +69,10 @@ import HeroHelpdeks from "./HeroHelpdeks.astro";
       <div class="bg-[#0f103e] rounded-xl shadow-md w-[350px] h-[420px]">
         <div class="text-center flex flex-col justify-center items-center">
           <div>
-            <Image class="w-42 float-right mt-7 mx-4" src={layer1} alt=""/>
+            <Image class="w-42 mx-4 mt-2 pt-6 filter drop-shadow-lg brightness-125" src={layer1} alt=""/>
           </div>
           <h2 class="text-xl font-semibold text-white rounded-t-xl   p-4 ">
-            <strong>SolucionesPersonalizadas:</strong>
+            <strong>Soluciones Personalizadas:</strong>
           </h2>
           <p class="text-sm text-gray-300 mt-2 py-4 px-6">
             Nos sumergimos en las necesidades únicas de cada cliente para diseñar soluciones tecnológicas a medida que potencian su crecimiento. Proponemos herramientas innovadoras y estrategias adaptadas, que permiten a las empresas alcanzar su máximo potencial de manera eficiente y escalable.
@@ -83,10 +83,10 @@ import HeroHelpdeks from "./HeroHelpdeks.astro";
       <div class="bg-[#0f103e] rounded-xl shadow-md w-[350px] h-[420px]">
         <div class=" text-center flex flex-col justify-center items-center">
           <div>
-            <Image class="w-42 float-right mx-4" src={layer2} alt=""/>
+            <Image class="w-42 mx-4 mt-2 pt-6 filter drop-shadow-lg brightness-125" src={layer2} alt=""/>
           </div>
           <h2 class="text-xl font-semibold text-white rounded-t-xl   p-4 ">
-            <strong>Asesoría <br> Estratégica:</strong>
+            <strong>Asesoría Estratégica:</strong>
           </h2>
           <p class="text-sm text-gray-300 mt-2 py-4 px-6">
             No solo desarrollamos, sino que acompañamos a las empresas en su viaje digital, guiándolas hacia las mejores prácticas y estrategias digitales. Nuestro enfoque consultivo asegura que cada decisión esté alineada con sus objetivos a largo plazo, optimizando recursos y maximizando resultados.
@@ -98,13 +98,15 @@ import HeroHelpdeks from "./HeroHelpdeks.astro";
   </div>
 </div>
 
-<div class="flex flex-col lg:flex-row items-center bg-white py-12 px-4 lg:py-24 lg:px-32 gap-8">
+<div class="flex flex-col lg:flex-row items-center bg-[#0f103e] py-12 px-4 lg:py-24 lg:px-32 gap-8">
   <!-- Imagen -->
-  <Image 
-    class="w-48 h-48 sm:w-24 sm:h-24 lg:w-[300px] lg:h-auto animate-bounce"
+   <div>
+    <Image 
+    class="pt-5 w-48 h-48 sm:w-24 sm:h-24 lg:w-[300px] lg:h-auto animate-bounce filter drop-shadow-lg"
     src={bot}
-    alt="bot"
-  />
+    alt="bot"/>
+   </div>
+
 
   <!-- Contenido -->
   <div class="w-full lg:w-[960px] h-auto p-6 lg:p-10 bg-[#efefef] rounded-tr-[30px] lg:rounded-tr-[50px] rounded-bl-[30px] lg:rounded-bl-[50px] shadow-[2px_4px_4px_0px_rgba(0,0,0,0.30)]">

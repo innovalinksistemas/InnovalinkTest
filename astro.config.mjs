@@ -4,6 +4,8 @@ import tailwind from "@astrojs/tailwind";
 
 import netlify from "@astrojs/netlify";
 
+import react from '@astrojs/react';
+
 // https://astro.build/config
 export default defineConfig({
   image: {
@@ -11,7 +13,7 @@ export default defineConfig({
   },
   output: 'server',
   site: 'https://innovalinkcr.com',
-  integrations: [tailwind()],
+  integrations: [tailwind(), react()],
   adapter: netlify({
     cacheOnDemandPages: true,
   }),

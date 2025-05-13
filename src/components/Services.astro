@@ -8,78 +8,12 @@ import marco from "../assets/marco2.png";
 import nave from "../assets/nave.png";
 import mundo from "../assets/mundo.png";
 import pc from "../assets/pc.png";
-
+import ServicesCarousel from '../components/ServicesCarousel.jsx';
 
 ---
 
 <div id="services" class="bg-white py-16 px-4 lg:px-16">
-  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12">
-    <!-- === CARD 1 === -->
-    <div class="relative flex flex-col items-center text-center">
-      <!-- Icono circular -->
-      <div class="w-[130px] h-[130px] sm:w-[150px] sm:h-[150px] bg-gradient-to-r from-white to-[#d2d6d7] rounded-full shadow-md flex items-center justify-center">
-        <div class="w-[100px] h-[100px] sm:w-[120px] sm:h-[120px] rounded-full bg-[radial-gradient(ellipse_50%_50%_at_50%_50%,_#54CEFF_0%,_#0F103E_100%)] flex items-center justify-center">
-          <Image class="p-2 w-[60px] h-[60px] sm:w-[70px] sm:h-[70px]" src={nave} alt="icono desarrollo web" />
-        </div>
-      </div>
-
-      <!-- Título -->
-      <p class="mt-6 bg-[#0f103e] text-white text-lg sm:text-xl lg:text-2xl font-semibold rounded-[20px] px-6 py-2 w-fit">
-        Desarrollo Web
-      </p>
-
-      <!-- Contenido -->
-      <div class="relative z-10 mt-8 px-4 pt-16 pb-8 bg-white rounded-lg shadow-lg">
-        <Image class="absolute -top-10 left-1/2 transform -translate-x-1/2 w-72 sm:w-80 -z-10 opacity-20" src={marco} alt="marco" />
-        <h3 class="text-xl sm:text-2xl font-extrabold">Diseño único y adaptado</h3>
-        <p class="mt-4 text-sm sm:text-base font-medium">
-          Diseñamos experiencias web únicas, modernas y completamente adaptadas a tus necesidades.
-        </p>
-      </div>
-    </div>
-
-    <!-- === CARD 2 === -->
-    <div class="relative flex flex-col items-center text-center">
-      <div class="w-[130px] h-[130px] sm:w-[150px] sm:h-[150px] bg-gradient-to-r from-white to-[#d2d6d7] rounded-full shadow-md flex items-center justify-center">
-        <div class="w-[100px] h-[100px] sm:w-[120px] sm:h-[120px] rounded-full bg-[radial-gradient(ellipse_50%_50%_at_50%_50%,_#54CEFF_0%,_#0F103E_100%)] flex items-center justify-center">
-          <Image class="p-2 w-[60px] h-[60px] sm:w-[70px] sm:h-[70px]" src={mundo} alt="icono API" />
-        </div>
-      </div>
-
-      <p class="mt-6 bg-[#0f103e] text-white text-lg sm:text-xl lg:text-2xl font-semibold rounded-[20px] px-6 py-2 w-fit">
-        API Integrations
-      </p>
-
-      <div class="relative z-10 mt-8 px-4 pt-16 pb-8 bg-white rounded-lg shadow-lg">
-        <Image class="absolute -top-10 left-1/2 transform -translate-x-1/2 w-72 sm:w-80 -z-10 opacity-20" src={marco} alt="marco" />
-        <h3 class="text-xl sm:text-2xl font-extrabold">Conectamos tus sistemas</h3>
-        <p class="mt-4 text-sm sm:text-base font-medium">
-          Conectamos tus plataformas de forma eficiente, optimizando tu flujo de trabajo con integraciones API personalizadas.
-        </p>
-      </div>
-    </div>
-
-    <!-- === CARD 3 === -->
-    <div class="relative flex flex-col items-center text-center">
-      <div class="w-[130px] h-[130px] sm:w-[150px] sm:h-[150px] bg-gradient-to-r from-white to-[#d2d6d7] rounded-full shadow-md flex items-center justify-center">
-        <div class="w-[100px] h-[100px] sm:w-[120px] sm:h-[120px] rounded-full bg-[radial-gradient(ellipse_50%_50%_at_50%_50%,_#54CEFF_0%,_#0F103E_100%)] flex items-center justify-center">
-          <Image class="p-2 w-[60px] h-[60px] sm:w-[70px] sm:h-[70px]" src={pc} alt="icono consultoría" />
-        </div>
-      </div>
-
-      <p class="mt-6 bg-[#0f103e] text-white text-lg sm:text-xl lg:text-2xl font-semibold rounded-[20px] px-6 py-2 w-fit">
-        Consultoría de IT
-      </p>
-
-      <div class="relative z-10 mt-8 px-4 pt-16 pb-8 bg-white rounded-lg shadow-lg">
-        <Image class="absolute -top-10 left-1/2 transform -translate-x-1/2 w-72 sm:w-80 -z-10 opacity-20" src={marco} alt="marco" />
-        <h3 class="text-xl sm:text-2xl font-extrabold">Estrategia y eficiencia</h3>
-        <p class="mt-4 text-sm sm:text-base font-medium">
-          Optimizamos tu infraestructura tecnológica y alineamos tus procesos con las mejores prácticas de la industria.
-        </p>
-      </div>
-    </div>
-  </div>
+  <ServicesCarousel client:load />
 </div>
 
 

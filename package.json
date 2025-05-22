@@ -21,6 +21,7 @@
     "flowbite": "^2.5.2",
     "framer-motion": "^12.11.0",
     "gsap": "^3.12.7",
+    "motion": "^12.12.1",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "swiper": "^11.2.1",

@@ -4,16 +4,74 @@ import { Image } from "astro:assets";
 // import api from "../../src/images/api.png";
 // import mk from "../../src/images/mk.jpg";
 
-import marco from "../assets/marco2.png";
 import nave from "../assets/nave.png";
 import mundo from "../assets/mundo.png";
 import pc from "../assets/pc.png";
-import ServicesCarousel from '../components/ServicesCarousel.jsx';
+
+import flechasolu from "../assets/flechasolu.png";
 
 ---
 
 <div id="services" class="bg-white py-16 px-4 lg:px-16">
-  <ServicesCarousel client:load />
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 max-w-7xl mx-auto">
+        <!-- === CARD 1 === -->
+    <div class="bg-white border border-black rounded-lg shadow-lg w-full max-w-[350px] h-auto mx-auto flex flex-col justify-between">
+      <div class="pt-10">
+        <Image class="w-28 mx-auto" src={nave} alt="Nave" />
+        <p class="text-black text-center text-xl lg:text-3xl pt-4 font-semibold">Desarrollo Web</p>
+        <p class="text-gray-600 text-center text-xl lg:text-1xl pt-4 font-semibold">Diseño moderno y adaptado</p>
+      </div>
+      <div class="px-6 py-6 text-center text-sm sm:text-base">
+        <p>
+          Creamos experiencias digitales únicas adaptadas a tu negocio.
+        </p>
+      </div>
+      <a href="https://wa.me/message/PSDJXRERKMOJI1" class="text-sm sm:text-base font-bold">
+      <div class="bg-neutral-200 rounded-full w-[238px] h-[45px] mx-auto mb-6 p-2 flex items-center justify-between px-4">
+        Explorar
+        <Image class="w-6" src={flechasolu} alt="flecha" />
+      </div>
+      </a>
+    </div>
+
+    <!-- === CARD 2 === -->
+    <div class="bg-white border border-black rounded-lg shadow-lg w-full max-w-[350px] h-auto mx-auto flex flex-col justify-between">
+      <div class="pt-10">
+        <Image class="w-24 mx-auto" src={mundo} alt="InnovaRes" />
+        <p class="text-black text-center text-xl lg:text-3xl pt-4 font-semibold">InnovaRes</p>
+      </div>
+      <div class="px-6 py-6 text-center text-sm sm:text-base">
+        <p>
+          Plataforma para administrar reservas de clientes en tiempo real, optimizando el orden y la organización.
+        </p>
+      </div>
+      <a href="https://wa.me/message/PSDJXRERKMOJI1" class="text-sm sm:text-base font-bold">
+      <div class="bg-neutral-200 rounded-full w-[238px] h-[45px] mx-auto mb-6 p-2 flex items-center justify-between px-4">
+        Conectar
+        <Image class="w-6" src={flechasolu} alt="flecha" />
+      </div>
+      </a>
+    </div>
+
+    <!-- === CARD 3 === -->
+    <div class="bg-white border border-black rounded-lg shadow-lg w-full max-w-[350px] h-auto mx-auto flex flex-col justify-between">
+      <div class="pt-10">
+        <Image class="w-20 mx-auto" src={pc} alt="InnovaTime" />
+        <p class="text-black text-center text-xl lg:text-3xl pt-4 font-semibold">InnovaTime</p>
+      </div>
+      <div class="px-6 py-6 text-center text-sm sm:text-base">
+        <p>
+          Herramienta de gestión laboral que organiza horarios, turnos, ausencias y vacaciones, con cálculos automáticos según normativa.
+        </p>
+      </div>
+      <a href="https://wa.me/message/PSDJXRERKMOJI1" class="text-sm sm:text-base font-bold">
+      <div class="bg-neutral-200 rounded-full w-[238px] h-[45px] mx-auto mb-6 p-2 flex items-center justify-between px-4">
+        Asesoría
+        <Image class="w-6" src={flechasolu} alt="flecha" />
+      </div>
+      </a>
+    </div>
+  </div>
 </div>
 
 

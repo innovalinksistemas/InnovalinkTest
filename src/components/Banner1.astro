@@ -3,14 +3,25 @@ import { Image } from "astro:assets";
 import flecha1 from "../assets/flecha4.png";
 import flecha2 from "../assets/flecha5.png";
 
+import { inView, animate } from 'motion';
+
+
+
 ---
 
-<div class="bg-white my-[42px]">
-    <Image class=" hidden sm:block sm:h-auto sm:w-auto sm:relative sm:top-14" src={flecha1} alt="flecha1" />
-    <Image class=" hidden sm:block sm:h-auto sm:w-auto sm:relative " src={flecha2} alt="flecha2" />
-   
-    <div class="flex flex-col lg:flex-row justify-center  items-center p-3 lg:p-0 lg:my-16 ">
-        <p class="text-2xl sm:text-3xl text-center  sm:text-left">" Conectamos la innovación con la tecnología <br/> 
-            para impulsar tu negocio al siguiente nivel "</p>
-    </div>
-</div>
+<section class="relative bg-white py-16 px-6 text-center overflow-hidden">
+  <!-- Líneas decorativas (lado izquierdo) -->
+  <div class="absolute top-8 left-0 h-[2px] w-[300px] bg-gradient-to-r from-cyan-400 to-transparent animate-lightline"></div>
+  <div class="absolute top-16 left-0 h-[2px] w-[200px] bg-gradient-to-r from-cyan-200 to-transparent animate-lightline delay-200"></div>
+
+  <!-- Contenido principal -->
+  <h2 class="text-2xl md:text-4xl font-medium text-black max-w-3xl mx-auto">
+    " Conectamos la innovación con la tecnología <br />
+    para impulsar tu negocio al siguiente nivel "
+  </h2>
+  
+  <div class="absolute top-42 right-0 h-[2px] w-[200px] bg-gradient-to-l from-cyan-200 to-transparent animate-lightline delay-200"></div>
+  <div class="absolute top-44 right-0 h-[2px] w-[400px] bg-gradient-to-l from-cyan-400 to-transparent animate-lightline"></div>
+
+
+</section>

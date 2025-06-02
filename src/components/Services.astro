@@ -1,77 +1,97 @@
 ---
 import { Image } from "astro:assets";
-// import web from "../../src/images/web.jpg";
-// import api from "../../src/images/api.png";
-// import mk from "../../src/images/mk.jpg";
+import { } from '@lucide/astro';
+import astro from '../assets/astro.png'
+import vue from '../assets/vue.png'
+import next from '../assets/next.png'
 
-import nave from "../assets/nave.png";
-import mundo from "../assets/mundo.png";
-import pc from "../assets/pc.png";
-
-import flechasolu from "../assets/flechasolu.png";
 
 ---
+<section
+  id="tecnologias"
+  class="py-16 px-6 bg-gradient-to-b from-[#0B0F25] to-[#1B1140] text-white"
+>
+  <div class="max-w-6xl mx-auto text-center">
+    <!-- Título con gradiente en el texto -->
+    <h2
+      class="text-3xl md:text-4xl font-extrabold bg-clip-text text-transparent
+             bg-gradient-to-r from-cyan-400 to-purple-500 mb-2"
+    >
+      Tecnologías Nativas
+    </h2>
+    <p class="text-gray-300 mb-12">
+      Trabajamos con las tecnologías más avanzadas para garantizar el máximo rendimiento
+    </p>
 
-<div id="services" class="bg-white py-16 px-4 lg:px-16">
-  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 max-w-7xl mx-auto">
-        <!-- === CARD 1 === -->
-    <div class="bg-white border border-black rounded-lg shadow-lg w-full max-w-[350px] h-auto mx-auto flex flex-col justify-between">
-      <div class="pt-10">
-        <Image class="w-28 mx-auto" src={nave} alt="Nave" />
-        <p class="text-black text-center text-xl lg:text-3xl pt-4 font-semibold">Desarrollo Web</p>
-        <p class="text-gray-600 text-center text-xl lg:text-1xl pt-4 font-semibold">Diseño moderno y adaptado</p>
-      </div>
-      <div class="px-6 py-6 text-center text-sm sm:text-base">
-        <p>
-          Creamos experiencias digitales únicas adaptadas a tu negocio.
+    <!-- Grid responsivo para 3 tarjetas -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <!-- Tarjeta Astro.js -->
+      <div
+        class="flex flex-col items-center bg-white/10 backdrop-blur-md rounded-xl
+               p-6 hover:bg-white/20 transition-colors shadow-lg"
+      >
+        <!-- Icono cuadrado con degradado naranja-rojo -->
+        <div
+          class="w-20 h-20 rounded-lg
+                 flex items-center justify-center mb-4"
+        >
+          <Image src={astro} class="w-15 h-15" alt="astro" />
+        </div>
+
+        <!-- Nombre -->
+        <h3 class="text-xl font-semibold text-white mb-3">Astro.js</h3>
+
+        <!-- Descripción -->
+        <p class="text-gray-300 text-sm leading-relaxed">
+          Framework ultra-rápido para sitios web estáticos y dinámicos con carga mínima de JavaScript.
         </p>
       </div>
-      <a href="https://wa.me/message/PSDJXRERKMOJI1" class="text-sm sm:text-base font-bold">
-      <div class="bg-neutral-200 rounded-full w-[238px] h-[45px] mx-auto mb-6 p-2 flex items-center justify-between px-4">
-        Explorar
-        <Image class="w-6" src={flechasolu} alt="flecha" />
-      </div>
-      </a>
-    </div>
 
-    <!-- === CARD 2 === -->
-    <div class="bg-white border border-black rounded-lg shadow-lg w-full max-w-[350px] h-auto mx-auto flex flex-col justify-between">
-      <div class="pt-10">
-        <Image class="w-24 mx-auto" src={mundo} alt="InnovaRes" />
-        <p class="text-black text-center text-xl lg:text-3xl pt-4 font-semibold">InnovaRes</p>
-      </div>
-      <div class="px-6 py-6 text-center text-sm sm:text-base">
-        <p>
-          Plataforma para administrar reservas de clientes en tiempo real, optimizando el orden y la organización.
+      <!-- Tarjeta Vue.js -->
+      <div
+        class="flex flex-col items-center bg-white/10 backdrop-blur-md rounded-xl
+               p-6 hover:bg-white/20 transition-colors shadow-lg"
+      >
+        <!-- Icono cuadrado con degradado verde -->
+        <div
+          class="w-20 h-20 rounded-lg
+                 flex items-center justify-center mb-4"
+        >
+          <Image src={vue} class="w-15 h-15" alt="Vue" />
+        </div>
+
+        <!-- Nombre -->
+        <h3 class="text-xl font-semibold text-white mb-3">Vue.js</h3>
+
+        <!-- Descripción -->
+        <p class="text-gray-300 text-sm leading-relaxed">
+          Framework progresivo para interfaces de usuario reactivas y aplicaciones de una sola página.
         </p>
       </div>
-      <a href="https://wa.me/message/PSDJXRERKMOJI1" class="text-sm sm:text-base font-bold">
-      <div class="bg-neutral-200 rounded-full w-[238px] h-[45px] mx-auto mb-6 p-2 flex items-center justify-between px-4">
-        Conectar
-        <Image class="w-6" src={flechasolu} alt="flecha" />
-      </div>
-      </a>
-    </div>
 
-    <!-- === CARD 3 === -->
-    <div class="bg-white border border-black rounded-lg shadow-lg w-full max-w-[350px] h-auto mx-auto flex flex-col justify-between">
-      <div class="pt-10">
-        <Image class="w-20 mx-auto" src={pc} alt="InnovaTime" />
-        <p class="text-black text-center text-xl lg:text-3xl pt-4 font-semibold">InnovaTime</p>
-      </div>
-      <div class="px-6 py-6 text-center text-sm sm:text-base">
-        <p>
-          Herramienta de gestión laboral que organiza horarios, turnos, ausencias y vacaciones, con cálculos automáticos según normativa.
+      <!-- Tarjeta Next.js -->
+      <div
+        class="flex flex-col items-center bg-white/10 backdrop-blur-md rounded-xl
+               p-6 hover:bg-white/20 transition-colors shadow-lg"
+      >
+        <!-- Icono cuadrado con degradado azul -->
+        <div
+          class="w-20 h-20 rounded-lg
+                 flex items-center justify-center mb-4"
+        >
+          <Image src={next} class="w-15 h-15" alt="next" />
+        </div>
+
+        <!-- Nombre -->
+        <h3 class="text-xl font-semibold text-white mb-3">Next.js</h3>
+
+        <!-- Descripción -->
+        <p class="text-gray-300 text-sm leading-relaxed">
+          Framework de React para aplicaciones web de producción con renderizado híbrido y optimizaciones automáticas.
         </p>
       </div>
-      <a href="https://wa.me/message/PSDJXRERKMOJI1" class="text-sm sm:text-base font-bold">
-      <div class="bg-neutral-200 rounded-full w-[238px] h-[45px] mx-auto mb-6 p-2 flex items-center justify-between px-4">
-        Asesoría
-        <Image class="w-6" src={flechasolu} alt="flecha" />
-      </div>
-      </a>
     </div>
   </div>
-</div>
+</section>
 
 

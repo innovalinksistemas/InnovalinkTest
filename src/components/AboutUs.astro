@@ -1,13 +1,6 @@
 ---
 import { Image } from "astro:assets";
-import flecha1 from "../assets/flecha4.png";
-import flecha2 from "../assets/flecha5.png";
-
-import layer1 from "../assets/Layer_1.png";
-import layer2 from "../assets/Layer_2.png";
-import layer3 from "../assets/Layer_3.png";
-
-import bot from "../assets/bot.png";
+import { Globe, Code, Zap, CircleCheckBig, CheckCheckIcon} from '@lucide/astro';
 
 import HeroHelpdeks from "./HeroHelpdeks.astro";
 
@@ -20,7 +13,7 @@ import HeroHelpdeks from "./HeroHelpdeks.astro";
   <HeroHelpdeks />
 </div>
 
-<div id="aboutUs" class=" bg-gradient-to-br from-sky-950 to-blue-800  p-4">
+<!-- <div id="aboutUs" class=" bg-gradient-to-br from-sky-950 to-blue-800  p-4">
   <div class="text-white p-4 lg:max-w-4xl lg:mx-auto ">
     <p class="pb-4 text-center text-xl font-bold lg:text-5xl">Quienes Somos</p>
     <div class="max-w-xs mx-auto lg:max-w-full">
@@ -36,87 +29,102 @@ import HeroHelpdeks from "./HeroHelpdeks.astro";
     </div>
   </div>
 
-</div>
+</div> -->
 
-<div class="bg-white">
-  <p class="sm:pb-4 text-center text-4xl lg:text-4xl pt-4 sm:pt-[96px]">¿Qué ofrecemos?</p>
-
-
-  <Image class=" hidden sm:block  w-80 relative top-2" src={flecha1} alt="flecha1" />
-  <Image class="  hidden sm:block w-80 relative -top-8" src={flecha2} alt="flecha2" />
-
-  <Image class=" hidden sm:block w-80 relative -top-8 float-right rotate-180" src={flecha1} alt="flecha1" />
-
-
-  <div class="bg-white px-4 py-8">
-    <div
-      class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl place-items-center mx-auto">
-
-      <div class="bg-[#0f103e] rounded-xl shadow-md w-[350px] h-[420px]">
-        <div class="text-center flex flex-col justify-center items-center">
-          <div>
-            <Image class="w-42 mx-4 mt-2 pt-6 filter drop-shadow-lg brightness-125" src={layer3} alt=""/>
-          </div>
-          <h2 class="text-xl font-semibold text-white rounded-t-xl  bg-[#0f103e] p-4 ">
-            <strong>Creación de Páginas Web Modernas y Funcionales:</strong>
-          </h2>
-          <p class="text-sm text-gray-300 mt-2 py-2 px-6">
-            Desarrollamos sitios web a la medida, fusionando creatividad y tecnología de última generación. Cada página que diseñamos está pensada para ofrecer experiencias únicas e interactivas, que no solo capturan la atención de los usuarios, sino que también cumplen con los más altos estándares de funcionalidad y rendimiento.
-          </p>
-        </div>
-      </div>
-
-      <div class="bg-[#0f103e] rounded-xl shadow-md w-[350px] h-[420px]">
-        <div class="text-center flex flex-col justify-center items-center">
-          <div>
-            <Image class="w-42 mx-4 mt-2 pt-6 filter drop-shadow-lg brightness-125" src={layer1} alt=""/>
-          </div>
-          <h2 class="text-xl font-semibold text-white rounded-t-xl   p-4 ">
-            <strong>Soluciones Personalizadas:</strong>
-          </h2>
-          <p class="text-sm text-gray-300 mt-2 py-4 px-6">
-            Nos sumergimos en las necesidades únicas de cada cliente para diseñar soluciones tecnológicas a medida que potencian su crecimiento. Proponemos herramientas innovadoras y estrategias adaptadas, que permiten a las empresas alcanzar su máximo potencial de manera eficiente y escalable.
-          </p>
-        </div>
-      </div>
-
-      <div class="bg-[#0f103e] rounded-xl shadow-md w-[350px] h-[420px]">
-        <div class=" text-center flex flex-col justify-center items-center">
-          <div>
-            <Image class="w-42 mx-4 mt-2 pt-6 filter drop-shadow-lg brightness-125" src={layer2} alt=""/>
-          </div>
-          <h2 class="text-xl font-semibold text-white rounded-t-xl   p-4 ">
-            <strong>Asesoría Estratégica:</strong>
-          </h2>
-          <p class="text-sm text-gray-300 mt-2 py-4 px-6">
-            No solo desarrollamos, sino que acompañamos a las empresas en su viaje digital, guiándolas hacia las mejores prácticas y estrategias digitales. Nuestro enfoque consultivo asegura que cada decisión esté alineada con sus objetivos a largo plazo, optimizando recursos y maximizando resultados.
-          </p>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</div>
-
-<div class="flex flex-col lg:flex-row items-center bg-[#0f103e] py-12 px-4 lg:py-24 lg:px-32 gap-8">
-  <!-- Imagen -->
-   <div>
-    <Image 
-    class="pt-5 w-48 h-48 sm:w-24 sm:h-24 lg:w-[300px] lg:h-auto animate-bounce filter drop-shadow-lg"
-    src={bot}
-    alt="bot"/>
-   </div>
-
-
-  <!-- Contenido -->
-  <div class="w-full lg:w-[960px] h-auto p-6 lg:p-10 bg-[#efefef] rounded-tr-[30px] lg:rounded-tr-[50px] rounded-bl-[30px] lg:rounded-bl-[50px] shadow-[2px_4px_4px_0px_rgba(0,0,0,0.30)]">
-    <h2 class="text-center lg:text-right bg-gradient-to-r from-[#0f103e] to-[#54ceff] bg-clip-text text-transparent text-3xl sm:text-5xl lg:text-[80px] font-bold">
+<section id="servicios" class="py-16 px-6 bg-gradient-to-r from-[#0B0F25] to-[#241E4E]">
+  <div class="max-w-6xl mx-auto text-center">
+    <!-- Título + Subtítulo -->
+    <h2 class="text-3xl md:text-4xl font-bold text-cyan-400 mb-2">
       Nuestros Servicios
     </h2>
-    <p class="text-center lg:text-right text-[#383838] text-base sm:text-lg lg:text-[20px] font-medium mt-4">
-      Sumérgete en el mundo digital con nuestras soluciones de vanguardia. Cada uno de nuestros servicios está diseñado para llevar tu negocio al siguiente nivel.
+    <p class="text-gray-300 mb-12">
+      Soluciones completas de desarrollo web con tecnologías de vanguardia
     </p>
+
+    <!-- Grid de tarjetas -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <!-- Tarjeta 1: Desarrollo Web -->
+      <div class="relative bg-white/10 backdrop-blur-md rounded-xl p-6 hover:bg-white/20 transition-colors shadow-lg">
+        <!-- Ícono de Desarrollo Web -->
+        <div class="w-12 h-12 bg-gradient-to-br from-blue-400 to-cyan-300 rounded-lg flex items-center justify-center mb-4">
+          <!-- Sustituye este SVG por tu propio ícono si lo deseas -->
+           <Globe class="w-6 h-6 text-white" />
+        </div>
+        <h3 class="text-xl text-left font-semibold text-white mb-3">Desarrollo Web</h3>
+        <p class="text-gray-300 text-left mb-4">
+          Aplicaciones web modernas y responsivas con las mejores prácticas de desarrollo.
+        </p>
+        <ul class="text-gray-300 space-y-2">
+          <li class="flex items-center gap-2">
+           <CircleCheckBig class="w-5 h-5 text-cyan-300" />
+            Sitios web corporativos
+          </li>
+          <li class="flex items-center gap-2">
+           <CircleCheckBig class="w-5 h-5 text-cyan-300" />
+            E-commerce avanzado
+          </li>
+          <li class="flex items-center gap-2">
+           <CircleCheckBig class="w-5 h-5 text-cyan-300" />
+            Aplicaciones web complejas
+          </li>
+        </ul>
+      </div>
+
+      <!-- Tarjeta 2: Software Personalizado -->
+      <div class="relative bg-white/10 backdrop-blur-md rounded-xl p-6 hover:bg-white/20 transition-colors shadow-lg">
+        <!-- Ícono de Software Personalizado -->
+        <div class="w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-500 rounded-lg flex items-center justify-center mb-4">
+          <!-- Sustituye este SVG por tu propio ícono si lo deseas -->
+           <Code class="w-6 h-6 text-white" />
+        </div>
+        <h3 class="text-xl font-semibold text-left text-white mb-3">Software Personalizado</h3>
+        <p class="text-gray-300 text-left mb-4">
+          Soluciones de software a medida para optimizar los procesos de tu negocio.
+        </p>
+        <ul class="text-gray-300 space-y-2">
+          <li class="flex items-center gap-2">
+           <CircleCheckBig class="w-5 h-5 text-pink-300 " />
+            Sistemas de gestión
+          </li>
+          <li class="flex items-center gap-2">
+           <CircleCheckBig class="w-5 h-5 text-pink-300 " />
+            APIs y microservicios
+          </li>
+          <li class="flex items-center gap-2">
+           <CircleCheckBig class="w-5 h-5 text-pink-300 " />
+            Automatización de procesos
+          </li>
+        </ul>
+      </div>
+
+      <!-- Tarjeta 3: Optimización -->
+      <div class="relative bg-white/10 backdrop-blur-md rounded-xl p-6 hover:bg-white/20 transition-colors shadow-lg">
+        <!-- Ícono de Optimización -->
+        <div class="w-12 h-12 bg-gradient-to-br from-green-400 to-green-600 rounded-lg flex items-center justify-center mb-4">
+          <!-- Sustituye este SVG por tu propio ícono si lo deseas -->
+           <Zap class="w-6 h-6 text-white" />
+        </div>
+        <h3 class="text-xl font-semibold text-left text-white mb-3">Optimización</h3>
+        <p class="text-gray-300 text-left mb-4">
+          Mejoramos el rendimiento y la experiencia de usuario de tus aplicaciones existentes.
+        </p>
+        <ul class="text-gray-300 space-y-2">
+          <li class="flex items-center gap-2">
+           <CircleCheckBig class="w-5 h-5 text-green-300 " />
+            Auditorías de rendimiento
+          </li>
+          <li class="flex items-center gap-2">
+           <CircleCheckBig class="w-5 h-5 text-green-300 " />
+            SEO técnico
+          </li>
+          <li class="flex items-center gap-2">
+           <CircleCheckBig class="w-5 h-5 text-green-300 " />
+            Migración de tecnologías
+          </li>
+        </ul>
+      </div>
+    </div>
   </div>
-</div>
+</section>
 
 

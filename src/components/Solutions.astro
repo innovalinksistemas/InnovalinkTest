@@ -1,12 +1,7 @@
 ---
 import { Image } from "astro:assets";
-// import js from "../../src/images/js.png";
 
-import pv from "../assets/pv.png";
-import time from "../assets/time.png";
-import res from "../assets/res.png";
-
-import flechasolu from "../assets/flechasolu.png";
+import { Package , Computer, Library, Code} from '@lucide/astro';
 
 
 ---
@@ -32,11 +27,7 @@ import flechasolu from "../assets/flechasolu.png";
         <div class="flex justify-between items-start">
           <!-- Ícono cuadrado (reemplaza por tu SVG si quieres) -->
           <div class="w-12 h-12 bg-gradient-to-br from-blue-400 to-cyan-300 rounded-lg flex items-center justify-center">
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <!-- Ejemplo de icono de flujo/proyecto -->
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                d="M3 7h18M3 12h18M3 17h18" />
-            </svg>
+            <Package class="w-6 h-6 text-white" />
           </div>
           <!-- Precio -->
           <div class="text-right">
@@ -204,7 +195,7 @@ import flechasolu from "../assets/flechasolu.png";
           </div>
           <!-- Precio -->
           <div class="text-right">
-            <p class="text-2xl font-bold text-green-400">$1,999</p>
+            <p class="text-2xl font-bold text-green-400">₡264,000</p>
             <p class="text-xs text-gray-300">Licencia única</p>
           </div>
         </div>

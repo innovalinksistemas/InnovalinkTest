@@ -1,0 +1,24 @@
+# robots.txt para www.innovalinkcr.com
+# Bloquear rutas internas o sensibles, permitir el resto y apuntar al sitemap
+
+User-agent: *
+# Bloquea carpetas de administración y recursos que no aportan valor SEO
+Disallow: /admin/
+Disallow: /login/
+Disallow: /dashboard/
+Disallow: /private/
+Disallow: /scripts/   # si tienes scripts accesibles solo para backend
+
+# Si usas parámetros que generan contenido duplicado, ejemplos:
+# Disallow: /*?sort=
+# Disallow: /*?filter=
+# Disallow: /*?ref=
+
+# Permitimos el resto del sitio
+Allow: /
+
+# Ubicación del sitemap
+Sitemap: https://innovalinkcr.com/sitemap.xml
+
+# Opcional: rate-limit para bots muy agresivos (Googlebot generalmente ajusta solo)
+# Crawl-delay: 10

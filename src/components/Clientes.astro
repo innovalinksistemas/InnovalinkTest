@@ -1,0 +1,30 @@
+---
+const clientes = [
+  { name: "Asada La Fortuna", logo: "src/assets/clientes/AsadaFortuna.png", link: "https://www.asadalafortuna.com", style: "h-20 w-auto bg-white rounded-full p-2  object-contain" },
+  { name: "Typica", logo: "src/assets/clientes/Typica.png", link: "https://www.typicacr.com", style: "h-20 drop-shadow-xl w-20 bg-white rounded-full p-2 object-contain" },
+  { name: "Nene’s", logo: "src/assets/clientes/nenes.png", link: "https://www.nenescr.com", style: "h-20 w-20 bg-white rounded-full p-2 object-contain" },
+  { name: "Cabañas del Rio", logo: "src/assets/clientes/cabanas.png", link: "https://www.cabanasdelriocr.com", style: "h-20 drop-shadow-xl w-auto object-contain" },
+  { name: "Eden", logo: "src/assets/clientes/eden.jpeg", link: "https://www.edenorganicfarmbungalows.com", style: "h-20 drop-shadow-xl rounded-lg w-auto object-contain" },
+  { name: "Broffees", logo: "src/assets/clientes/Broffees.png", link: "https://www.broffeescr.com", style: "h-20 w-auto drop-shadow-xl object-contain" },
+  { name: "Vita Cafe", logo: "src/assets/clientes/vita.png", link: "https://www.vitacafecr.com", style: "h-20 drop-shadow-xl w-20 object-contain" },
+
+];
+
+---
+<section id="clientes" class="py-20 bg-[#241E4E] scroll-mt-20 ">
+  <h2 class="text-3xl md:text-4xl text-center font-extrabold bg-clip-text text-transparent
+             bg-gradient-to-r from-cyan-400 to-purple-500 mb-8">Empresas que Confían en Nosotros</h2>
+  <div class="grid grid-cols-2 md:grid-cols-4 gap-8 items-center justify-items-center px-4 max-w-6xl mx-auto">
+    {clientes.map((cliente) => (
+      <a
+        href={cliente.link || "#"}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="opacity-80 hover:opacity-100 transition-transform hover:scale-105"
+        aria-label={`Cliente: ${cliente.name}`}
+      >
+        <img src={cliente.logo} alt={cliente.name} class={cliente.style} />
+      </a>
+    ))}
+  </div>
+</section>

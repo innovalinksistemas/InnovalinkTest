@@ -1,0 +1,21 @@
+---
+import { Image } from 'astro:assets';
+import logo from "../assets/logo-innovalink.png"; // Asegúrate de tener tu logo cargado correctamente
+---
+  <section class="bg-blue-950 text-white font-sans flex items-center justify-center h-screen min-h-screen px-6">
+    <div class="text-center space-y-6 max-w-md">
+      <div class="flex justify-center">
+        <Image src={logo} alt="Logo de Innovalink" class="h-96" />
+      </div>
+
+      <h1 class="text-4xl font-bold text-[#0099CD]">404</h1>
+      <p class="text-xl font-semibold">Pagina no encontrada</p>
+      <p class="text-gray-300 text-sm">
+        Lo sentimos, la pagina que estas buscando no existe o fue movida.
+      </p>
+      <br>
+      <a href="/" class="inline-block bg-[#0099CD] hover:bg-[#057fa9] text-white font-semibold py-2 px-6 rounded-full transition duration-300 mt-10">
+        Volver al inicio
+      </a>
+    </div>
+    </section>

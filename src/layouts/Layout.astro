@@ -6,10 +6,12 @@ import Banner1 from "../components/Banner1.astro";
 import AboutUs from "@components/AboutUs.astro";
 import Services from "@components/Services.astro";
 import Solutions from "@components/Solutions.astro";
+import Clientes from "@components/Clientes.astro";
+
 ---
 
 <!doctype html>
-<html lang="es">
+<html lang="es" class="!scroll-smooth ">
   <head>
     <!-- Codificación para español -->
     <meta charset="UTF-8" />
@@ -70,6 +72,7 @@ import Solutions from "@components/Solutions.astro";
       <AboutUs />
       <Services />
       <Solutions />
+      <Clientes />
       <Footer />
       <slot />
     </div>

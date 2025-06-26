@@ -1,0 +1,79 @@
+---
+import appMockup from "../assets/celularwallet.png";
+
+import { Zap, Shield, Globe, ShoppingCart} from '@lucide/astro';
+
+---
+
+<section id="innovawallet" class="bg-gradient-to-r from-white to-[#eef1fc] py-24">
+  <div title="Innovawallet"  class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 items-center gap-12">
+    <!-- Contenido Izquierdo -->
+    <div class="space-y-6 ">
+      <span class="bg-violet-100 text-blue-800 text-sm px-4 py-1 rounded-full font-medium inline-flex">
+        <Zap class="text-yellow-400 mr-2" /> Nueva Experiencia Digital
+      </span>
+
+      <h2 class="text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">
+        Descubre <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-blue-800">InnovaWallet</span>
+      </h2>
+
+      <p class="text-lg text-gray-600 max-w-xl">
+        Es la herramienta inteligente de fidelización que conecta comercios con sus mejores clientes. Aumenta tus ventas, premia la lealtad y haz que cada compra cuente. ¡Activa tu comercio hoy!
+      </p>
+
+      <!-- Beneficios -->
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 text-sm text-gray-700 font-medium">
+        <span class="inline-flex"> <Shield class="pr-2" /> 100% Seguro</span>
+        <span class="inline-flex"> <ShoppingCart class="pr-2" /> Múltiples Comercios</span>
+        <span class="inline-flex"> <Zap class="pr-2" />Transferencias Rápidas</span>
+        <span class="inline-flex"> <Globe class="pr-2" /> Acceso Web</span>
+      </div>
+
+      <!-- Botones -->
+      <div class="flex flex-wrap gap-4 pt-4">
+        <a href="https://www.innovawallet.app" class="px-6 py-3 bg-blue-800 text-white rounded-full shadow-md hover:bg-indigo-700 transition">
+          Usar App Web
+        </a>
+        <a href="https://api.whatsapp.com/send?phone=50662020784" class="px-6 py-3 border border-blue-200 text-blue-800 rounded-full hover:bg-blue-100 transition">
+          Contactar con Asesor
+        </a>
+      </div>
+
+      <!-- Stats -->
+      <div class="flex gap-8 pt-6 text-sm text-gray-600">
+        <div><strong class="text-xl text-black">40+</strong><br />Usuarios Activos</div>
+        <div><strong class="text-xl text-black">+50%</strong><br />de clientes prefieren comercios con beneficios de fidelidad</div>
+        <div><strong class="text-xl text-black">98%</strong><br /> de satisfacción entre los comercios afiliados</div>
+      </div>
+    </div>
+
+    <!-- Imagen Derecha -->
+    <div class="fade-section relative">
+      <img src={appMockup.src} alt="InnovaWallet Mockup" class="mx-auto w-full max-w-xs lg:max-w-md drop-shadow-xl" />
+    </div>
+  </div>
+</section>
+
+<!-- Animación con GSAP -->
+<script>
+  import { gsap } from "gsap"
+  import { ScrollTrigger } from "gsap/ScrollTrigger"
+
+  gsap.registerPlugin(ScrollTrigger)
+
+  gsap.utils.toArray(".fade-section").forEach(el => {
+    gsap.from(el, {
+      scrollTrigger: {
+        trigger: el,
+        start: "top 80%",
+        end: "top 100px",
+        scrub:1,
+        toggleActions: "play pause reserve pause"
+      },
+      x: 100,
+      opacity: 0,
+      duration: 1,
+      ease: "power2.out"
+    });
+  });
+</script>

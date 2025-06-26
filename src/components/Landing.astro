@@ -15,7 +15,7 @@ import HeroHelpdeks from "./HeroHelpdeks.astro";
   <div class="h-screen flex items-center justify-center px-6  pt-[1%]  2xl:pt-[1%]">
     <div class="z-10 flex flex-col xl:flex-row xl:space-x-32  text-center">
       <div class="flex flex-col items-center top-[100px]">
-        <Image src={logo} alt="logo" class="sm:w-[45rem] mx-auto animate-pulse-glow" />
+        <Image src={logo} alt="logo" id="hero-logo" class="sm:w-[45rem] mx-auto animate-pulse-glow transition-all duration-300" />
         <h3 class="text-white text-pretty text-4xl sm:text-lg lg:text-[40px] mt-4">
           SOLUCIONES TECNOLÓGICAS INNOVADORAS
         </h3>
@@ -40,3 +40,24 @@ import HeroHelpdeks from "./HeroHelpdeks.astro";
 
 
 </div>
+
+<script >
+  import { gsap } from "gsap"
+  import { ScrollTrigger } from "gsap/ScrollTrigger"
+
+  gsap.registerPlugin(ScrollTrigger)
+
+
+  gsap.to("#hero-logo", {
+    scrollTrigger: {
+      trigger: "#hero-logo",
+      start: "top top",
+      end: "bottom top",
+      scrub: true,
+    },
+    opacity: 0,
+    scale: 1.2,
+    y: -40,
+    ease: "power1.out",
+  });
+</script>

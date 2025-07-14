@@ -1,14 +1,7 @@
 ---
-import Landing from "@components/Landing.astro";
-import Footer from "@components/Footer.astro";
+import Tienda from "@components/Tienda.astro";
 import { SEO } from "astro-seo";
-import Banner1 from "../components/Banner1.astro";
-import AboutUs from "@components/AboutUs.astro";
-import InnovaBanner1 from "@components/InnovawalletBanner.astro"
-import Services from "@components/Services.astro";
-import Solutions from "@components/Solutions.astro";
-import Clientes from "@components/Clientes.astro";
-import InnovawalletBanner from "@components/InnovawalletBanner.astro";
+
 
 ---
 
@@ -31,14 +24,6 @@ import InnovawalletBanner from "@components/InnovawalletBanner.astro";
         link: [{ rel: "icon", href: "/icon-innova.svg" }],
       }}
     />
-
-    <!-- Google tag (gtag.js) event -->
-<script>
-  gtag('event', 'conversion_event_outbound_click', {
-    // <event_parameters>
-  });
-</script>
-
 
 <!-- Google tag (gtag.js) -->
 <!-- Google Tag Manager -->
@@ -87,14 +72,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     
     <canvas id="cnv" class="absolute top-0 left-0 w-screen h-screen"></canvas>
     <div class="">
-      <Landing />
-      <Banner1 />
-      <InnovawalletBanner />
-      <AboutUs />
-      <Services />
-      <Solutions />
-      <Clientes />
-      <Footer />
+      <Tienda/>
       <slot />
     </div>
 
@@ -105,36 +83,3 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </body>
 </html>
 
-<script>
-  //Get context and screen size;
-  var ctx = cnv.getContext("2d");
-  var W = window.innerWidth;
-  var H = window.innerHeight;
-
-  //Set Canvas and Background Color;
-  cnv.width = W;
-  cnv.height = H;
-  ctx.fillStyle = "#112";
-  ctx.fillRect(0, 0, W, H);
-
-  //Glow effect;
-  ctx.shadowBlur = 10;
-  ctx.shadowColor = "white";
-
-  function animate() {
-    //Random position and size of stars;
-    let x = W * Math.random();
-    let y = H * Math.random();
-    let r = 2.5 * Math.random();
-
-    //Draw the stars;
-    ctx.beginPath();
-    ctx.fillStyle = "white";
-    ctx.arc(x, y, r, 0, Math.PI * 2);
-    ctx.fill();
-
-    //Using setTimeout instead of window.requestAnimationFrame for slower speed... window.requestAnimationFrame is approximately equal to setTimeout(func, 17);
-    setTimeout(animate, 100);
-  }
-  animate();
-</script>

@@ -1,0 +1,75 @@
+---
+import Header from "@components/Header.astro";
+import Footer from "@components/Footer.astro";
+import Productos from "@components/Productos.astro";
+
+const categorias = [
+  { nombre: "Laptops", descripcion: "Equipos portátiles de alta calidad", icono: "💻" },
+  { nombre: "Smartphones", descripcion: "Los últimos modelos de teléfonos", icono: "📱" },
+  { nombre: "Audio", descripcion: "Auriculares y equipos de sonido", icono: "🎧" },
+]
+---
+
+<Header />
+<main class="">
+
+<!-- Fondo base -->
+<section class="bg-gradient-to-b from-blue-900 to-blue text-center pt-60 pb-20 px-6">
+          <h1 class="text-4xl sm:text-6xl font-bold text-gray-900 mb-4">Bienvenido a <span class="text-orange-300 font-mono">InnovaStore</span></h1>
+  <p class="text-gray-200 text-lg max-w-2xl mx-auto mb-6">
+    Encuentra los mejores equipos tecnológicos al mejor precio. Calidad garantizada y envío gratuito en compras superiores a $500.
+  </p>
+
+  <!-- Botones -->
+  <div class="flex justify-center gap-4 mb-12">
+    <a href="#productos" class="bg-black text-white px-6 py-3 rounded-lg hover:bg-gray-800">Ver Productos</a>
+    <a href="#nosotros" class="border border-gray-400 text-gray-700 px-6 py-3 rounded-lg hover:bg-gray-100">Conocer Más</a>
+  </div>
+
+
+
+
+  <!-- Categorías -->
+  <h2 class="text-5xl font-bold text-gray-800 mb-4">Nuestras Categorías</h2>
+  <p class="text-gray-200 mb-10 max-w-xl mx-auto">
+    Explora nuestra amplia gama de productos organizados por categorías para encontrar exactamente lo que necesitas.
+  </p>
+
+  <div class="grid sm:grid-cols-3 gap-6 max-w-5xl mx-auto">
+    {categorias.map((cat) => (
+      <div class="bg-white rounded-xl shadow-sm p-6 hover:shadow-md transition gsap-card">
+        <div class="text-5xl mb-4">{cat.icono}</div>
+        <h3 class="text-xl font-bold text-gray-800">{cat.nombre}</h3>
+        <p class="text-gray-500 mt-2">{cat.descripcion}</p>
+      </div>
+    ))}
+  </div>
+</section>
+</main>
+
+<Productos />
+
+
+<!-- GSAP Animation Script -->
+<script>
+  import { gsap } from "gsap";
+  import { ScrollTrigger } from "gsap/ScrollTrigger";
+  gsap.registerPlugin(ScrollTrigger);
+
+  gsap.utils.toArray(".gsap-card").forEach((card, i) => {
+    gsap.from(card, {
+      scrollTrigger: {
+        trigger: card,
+        start: "top 85%",
+        toggleActions: "play none none none",
+      },
+      opacity: 0,
+      y: 50,
+      duration: 0.8,
+      delay: i * 0.1,
+      ease: "power2.out"
+    });
+  });
+</script>
+
+<Footer/>

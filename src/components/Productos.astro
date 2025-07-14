@@ -1,0 +1,80 @@
+---
+
+import { Image } from 'astro:assets';
+
+const productos = [
+  {
+    nombre: 'Laptop Gaming VICTUS',
+    descripcion: 'Victus 15-fb2002la, AMD Ryzen™ 5, 16GB RAM, GPU de portátil NVIDIA® GeForce RTX™ 3050, 512 GB SSD, 15.6", FHD, Windows 11',
+    precio: 600,
+    rating: 4.8,
+    imagen: "https://i.ibb.co/gZz7wyx2/HP-Notebook-VICTUS.webp"
+  },
+  {
+    nombre: 'Lenovo ThinkCentre ',
+    descripcion: 'Una PC de escritorio con estilo y especialmente pensada para tu día de trabajo',
+    precio: 180,
+    rating: 4.9,
+    imagen: "https://i.ibb.co/qYYmt97v/THINK-PAD.png"
+  },
+  {
+    nombre: 'GS-UCM6302',
+    descripcion: 'CENTRAL TELEFÓNICA IP GRANDSTREAM 2 FXS 2FXO 1000 USUARIOS 200 TRUNK',
+    precio: 450,
+    rating: 4.7,
+    imagen: "https://i.ibb.co/Kxp5F6pW/GS-UCM-6302.webp"
+  }
+];
+---
+<section class="bg-white py-20 px-4 sm:px-10">
+  <h2 class="text-3xl sm:text-4xl font-bold text-center text-gray-900 mb-4">Productos Destacados</h2>
+  <p class="text-center text-gray-500 mb-12">Los equipos más populares y mejor valorados por nuestros clientes</p>
+
+  <div class="grid sm:grid-cols-3 gap-6 max-w-6xl mx-auto">
+    {productos.map((producto) => (
+      <div class="bg-white rounded-xl border border-gray-200 shadow-sm hover:shadow-md transition p-4 flex flex-col gsap-card">
+        
+        <!-- Imagen del producto -->
+        <div class="aspect-video  flex items-center justify-center rounded-md mb-4 overflow-hidden">
+          <img src={producto.imagen} alt={producto.nombre} class="object-contain bg-cover w-full h-full" loading="lazy" />
+        </div>
+
+        <div class="flex-1">
+          <div class="flex justify-between items-start mb-2">
+            <h3 class="font-semibold text-gray-900">{producto.nombre}</h3>
+            <div class="text-yellow-500 text-sm flex items-center gap-1">
+              ⭐ <span class="font-medium">{producto.rating}</span>
+            </div>
+          </div>
+          <p class="text-gray-600 text-sm mb-2">{producto.descripcion}</p>
+          <p class="text-black font-bold text-xl mb-4">${producto.precio.toLocaleString()}</p>
+        </div>
+
+        <button class="bg-black text-white py-2 px-4 rounded-md flex items-center justify-center gap-2 hover:bg-gray-800">
+          🛒 Agregar al Carrito
+        </button>
+      </div>
+    ))}
+  </div>
+</section>
+
+<script type="module" is:inline>
+  import { gsap } from 'gsap';
+  import { ScrollTrigger } from 'gsap/ScrollTrigger';
+  gsap.registerPlugin(ScrollTrigger);
+
+  gsap.utils.toArray('.gsap-card').forEach((card, i) => {
+    gsap.from(card, {
+      scrollTrigger: {
+        trigger: card,
+        start: "top 90%",
+        toggleActions: "play none none none",
+      },
+      opacity: 0,
+      y: 40,
+      duration: 0.6,
+      delay: i * 0.1,
+      ease: "power2.out"
+    });
+  });
+</script>

@@ -1,93 +1,51 @@
 ---
+// Importaciones
 import { Image } from "astro:assets";
-import { } from '@lucide/astro';
-import astro from '../assets/astro.png'
-import vue from '../assets/vue.png'
-import next from '../assets/next.png'
-
-import { CircleDot, CircleCheckBig, Library, Code} from '@lucide/astro';
-
-
+import { CircleDot, CircleCheckBig, Library, Code } from '@lucide/astro';
+import astro from '../assets/astro.png';
+import vue from '../assets/vue.png';
+import next from '../assets/next.png';
 ---
+<!-- TECNOLOGÍAS NATIVAS -->
 <section
   id="tecnologias"
-  class="py-16 px-6 bg-gradient-to-r from-[#0B0F25] to-[#241E4E] text-white scroll-mt-28"
+  class="py-20 px-6 bg-gradient-to-tr from-[#191834] via-[#2b2c68] to-[#338aca] text-white scroll-mt-28"
 >
-  <div class="max-w-6xl mx-auto text-center">
-    <!-- Título con gradiente en el texto -->
-    <h2
-      class="text-3xl md:text-4xl font-extrabold bg-clip-text text-transparent
-             bg-gradient-to-r from-cyan-400 to-purple-500 mb-2"
-    >
+  <div class="max-w-6xl mx-auto text-center" data-aos="fade-up">
+    <h2 class="text-3xl md:text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-[#26b7cd] to-[#61bdaf] mb-2">
       Tecnologías Nativas
     </h2>
-    <p class="text-gray-300 mb-12">
-      Trabajamos con las tecnologías más avanzadas para garantizar el máximo rendimiento
-    </p>
+    <p class="text-gray-300 mb-12">Trabajamos con las tecnologías más avanzadas para garantizar el máximo rendimiento</p>
 
-    <!-- Grid responsivo para 3 tarjetas -->
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-      <!-- Tarjeta Astro.js -->
-      <div
-        class="flex flex-col items-center bg-white/10 backdrop-blur-md rounded-xl
-               p-6 hover:bg-white/20 transition-colors shadow-lg"
-      >
-        <!-- Icono cuadrado con degradado naranja-rojo -->
-        <div
-          class="w-20 h-20 rounded-lg
-                 flex items-center justify-center mb-4"
-        >
-          <Image src={astro} class="w-15 h-15" alt="astro" />
+      <!-- ASTRO -->
+      <div class="flex flex-col items-center bg-white/10 backdrop-blur-md rounded-xl p-6 hover:bg-white/20 transition-colors shadow-lg" data-aos="zoom-in-up">
+        <div class="w-20 h-20 rounded-lg flex items-center justify-center mb-4">
+          <Image src={astro} class="w-16 h-16" alt="astro" />
         </div>
-
-        <!-- Nombre -->
         <h3 class="text-xl font-semibold text-white mb-3">Astro.js</h3>
-
-        <!-- Descripción -->
         <p class="text-gray-300 text-sm leading-relaxed">
           Framework ultra-rápido para sitios web estáticos y dinámicos con carga mínima de JavaScript.
         </p>
       </div>
 
-      <!-- Tarjeta Vue.js -->
-      <div
-        class="flex flex-col items-center bg-white/10 backdrop-blur-md rounded-xl
-               p-6 hover:bg-white/20 transition-colors shadow-lg"
-      >
-        <!-- Icono cuadrado con degradado verde -->
-        <div
-          class="w-20 h-20 rounded-lg
-                 flex items-center justify-center mb-4"
-        >
-          <Image src={vue} class="w-15 h-15" alt="Vue" />
+      <!-- VUE -->
+      <div class="flex flex-col items-center bg-white/10 backdrop-blur-md rounded-xl p-6 hover:bg-white/20 transition-colors shadow-lg" data-aos="zoom-in-up" data-aos-delay="100">
+        <div class="w-20 h-20 rounded-lg flex items-center justify-center mb-4">
+          <Image src={vue} class="w-16 h-16" alt="Vue.js" />
         </div>
-
-        <!-- Nombre -->
         <h3 class="text-xl font-semibold text-white mb-3">Vue.js</h3>
-
-        <!-- Descripción -->
         <p class="text-gray-300 text-sm leading-relaxed">
           Framework progresivo para interfaces de usuario reactivas y aplicaciones de una sola página.
         </p>
       </div>
 
-      <!-- Tarjeta Next.js -->
-      <div
-        class="flex flex-col items-center bg-white/10 backdrop-blur-md rounded-xl
-               p-6 hover:bg-white/20 transition-colors shadow-lg"
-      >
-        <!-- Icono cuadrado con degradado azul -->
-        <div
-          class="w-20 h-20 rounded-lg
-                 flex items-center justify-center mb-4"
-        >
-          <Image src={next} class="w-15 h-15" alt="next" />
+      <!-- NEXT -->
+      <div class="flex flex-col items-center bg-white/10 backdrop-blur-md rounded-xl p-6 hover:bg-white/20 transition-colors shadow-lg" data-aos="zoom-in-up" data-aos-delay="200">
+        <div class="w-20 h-20 rounded-lg flex items-center justify-center mb-4">
+          <Image src={next} class="w-16 h-16" alt="Next.js" />
         </div>
-
-        <!-- Nombre -->
         <h3 class="text-xl font-semibold text-white mb-3">Next.js</h3>
-
-        <!-- Descripción -->
         <p class="text-gray-300 text-sm leading-relaxed">
           Framework de React para aplicaciones web de producción con renderizado híbrido y optimizaciones automáticas.
         </p>
@@ -96,163 +54,66 @@ import { CircleDot, CircleCheckBig, Library, Code} from '@lucide/astro';
   </div>
 </section>
 
-<section id="comparativa" class="py-16 px-6 bg-gradient-to-r from-[#0B0F25] to-[#241E4E] text-white">
-  <div class="max-w-6xl mx-auto text-center">
-    <!-- Título + Subtítulo -->
-    <h2
-      class="text-3xl md:text-4xl font-extrabold bg-clip-text text-transparent
-             bg-gradient-to-r from-cyan-400 to-purple-500 mb-2"
-    >
+<!-- COMPARATIVA NATIVO VS NO-CODE -->
+<section
+  id="comparativa"
+  class="py-20 px-6 bg-gradient-to-br from-[#2b2c68] via-[#191834] to-[#26b7cd] text-white"
+>
+  <div class="max-w-6xl mx-auto text-center" data-aos="fade-up">
+    <h2 class="text-3xl md:text-4xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-[#61bdaf] to-[#26b7cd] mb-2">
       Nativo vs No-Code
     </h2>
     <p class="text-gray-300 mb-12">
       ¿Por qué elegir tecnologías nativas sobre plataformas no-code?
     </p>
 
-    <!-- Dos tarjetas comparativas -->
+    <!-- TARJETAS -->
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
-      
-      <!-- Tarjeta: Tecnologías Nativas -->
-      <div class="relative bg-white/10 backdrop-blur-md rounded-xl p-6 hover:bg-white/20 transition-colors shadow-lg">
-        <!-- Icono superior -->
+      <!-- NATIVO -->
+      <div class="bg-white/10 backdrop-blur-md rounded-xl p-6 hover:bg-white/20 transition-colors shadow-lg" data-aos="fade-right">
         <div class="w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-500 rounded-lg flex items-center justify-center mb-4 mx-auto">
           <Code class="w-6 h-6 text-white" />
         </div>
-
-        <!-- Título -->
         <h3 class="text-xl font-semibold text-white mb-4">Tecnologías Nativas</h3>
-
-        <!-- Lista de ventajas -->
         <ul class="text-gray-300 space-y-4 text-left">
-          <li class="flex items-start gap-3">
-          <CircleCheckBig class="w-5 h-5 text-cyan-300 animate-pulse" />
-            <div>
-              <strong>Rendimiento Superior</strong><br />
-              <span class="text-sm text-gray-300">
-                Tiempos de carga hasta 10 veces más rápidos que las soluciones no-code.
-              </span>
-            </div>
-          </li>
-          <li class="flex items-start gap-3">
-          <CircleCheckBig class="w-5 h-5 text-cyan-300 animate-pulse" />
-            <div>
-              <strong>Personalización Total</strong><br />
-              <span class="text-sm text-gray-300">
-                Libertad absoluta para implementar cualquier diseño o funcionalidad.
-              </span>
-            </div>
-          </li>
-          <li class="flex items-start gap-3">
-          <CircleCheckBig class="w-5 h-5 text-cyan-300 animate-pulse" />
-            <div>
-              <strong>Escalabilidad</strong><br />
-              <span class="text-sm text-gray-300">
-                Crece sin límites, soportando millones de usuarios sin degradar el rendimiento.
-              </span>
-            </div>
-          </li>
-          <li class="flex items-start gap-3">
-          <CircleCheckBig class="w-5 h-5 text-cyan-300 animate-pulse" />
-            <div>
-              <strong>SEO Avanzado</strong><br />
-              <span class="text-sm text-gray-300">
-                Control total sobre factores técnicos de SEO para mejor posicionamiento.
-              </span>
-            </div>
-          </li>
-          <li class="flex items-start gap-3">
-          <CircleCheckBig class="w-5 h-5 text-cyan-300 animate-pulse" />
-            <div>
-              <strong>Seguridad Superior</strong><br />
-              <span class="text-sm text-gray-300">
-                Implementación de medidas de seguridad personalizadas y actualizadas.
-              </span>
-            </div>
-          </li>
+          <li class="flex gap-3"><CircleCheckBig class="text-[#26b7cd]" /> Rendimiento Superior</li>
+          <li class="flex gap-3"><CircleCheckBig class="text-[#26b7cd]" /> Personalización Total</li>
+          <li class="flex gap-3"><CircleCheckBig class="text-[#26b7cd]" /> Escalabilidad</li>
+          <li class="flex gap-3"><CircleCheckBig class="text-[#26b7cd]" /> SEO Avanzado</li>
+          <li class="flex gap-3"><CircleCheckBig class="text-[#26b7cd]" /> Seguridad Superior</li>
         </ul>
       </div>
 
-      <!-- Tarjeta: Plataformas No-Code -->
-      <div class="relative bg-white/10 backdrop-blur-md rounded-xl p-6 hover:bg-white/20 transition-colors shadow-lg">
-        <!-- Icono superior -->
+      <!-- NO-CODE -->
+      <div class="bg-white/10 backdrop-blur-md rounded-xl p-6 hover:bg-white/20 transition-colors shadow-lg" data-aos="fade-left">
         <div class="w-12 h-12 bg-gradient-to-br from-gray-600 to-gray-800 rounded-lg flex items-center justify-center mb-4 mx-auto">
-           <Library class="w-6 h-6 text-white" />
+          <Library class="w-6 h-6 text-white" />
         </div>
-
-        <!-- Título -->
         <h3 class="text-xl font-semibold text-white mb-4">Plataformas No-Code</h3>
-
-        <!-- Lista de desventajas -->
         <ul class="text-gray-300 space-y-4 text-left">
-          <li class="flex items-start gap-3">
-           <CircleDot class="w-5 h-5 text-gray-400 " />
-            <div>
-              <strong>Desarrollo Rápido</strong><br />
-              <span class="text-sm text-gray-300">
-                Implementación inicial más rápida pero con limitaciones a largo plazo.
-              </span>
-            </div>
-          </li>
-          <li class="flex items-start gap-3">
-           <CircleDot class="w-5 h-5 text-gray-400" />
-            <div>
-              <strong>Personalización Limitada</strong><br />
-              <span class="text-sm text-gray-300">
-                Restringido a las plantillas y funciones disponibles en la plataforma.
-              </span>
-            </div>
-          </li>
-          <li class="flex items-start gap-3">
-           <CircleDot class="w-5 h-5 text-gray-400" />
-            <div>
-              <strong>Problemas de Rendimiento</strong><br />
-              <span class="text-sm text-gray-300">
-                Código excesivo que ralentiza la carga y afecta la experiencia del usuario.
-              </span>
-            </div>
-          </li>
-          <li class="flex items-start gap-3">
-           <CircleDot class="w-5 h-5 text-gray-400" />
-            <div>
-              <strong>Costos Recurrentes</strong><br />
-              <span class="text-sm text-gray-300">
-                Suscripciones mensuales que aumentan con el tiempo y las necesidades.
-              </span>
-            </div>
-          </li>
-          <li class="flex items-start gap-3">
-           <CircleDot class="w-5 h-5 text-gray-400" />
-            <div>
-              <strong>Dependencia de la Plataforma</strong><br />
-              <span class="text-sm text-gray-300">
-                Tu sitio queda atado a la plataforma, dificultando migraciones futuras.
-              </span>
-            </div>
-          </li>
+          <li class="flex gap-3"><CircleDot class="text-gray-400" /> Desarrollo Rápido</li>
+          <li class="flex gap-3"><CircleDot class="text-gray-400" /> Personalización Limitada</li>
+          <li class="flex gap-3"><CircleDot class="text-gray-400" /> Problemas de Rendimiento</li>
+          <li class="flex gap-3"><CircleDot class="text-gray-400" /> Costos Recurrentes</li>
+          <li class="flex gap-3"><CircleDot class="text-gray-400" /> Dependencia de la Plataforma</li>
         </ul>
       </div>
-
     </div>
 
-    <!-- Fila de estadísticas -->
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-      <!-- 10× Más rápido -->
-      <div class="bg-white/10 backdrop-blur-md rounded-xl p-6 hover:bg-white/20 transition-colors shadow-lg">
+    <!-- ESTADÍSTICAS -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center" data-aos="fade-up">
+      <div class="bg-white/10 rounded-xl p-6 shadow-lg hover:bg-white/20">
         <p class="text-4xl font-bold text-cyan-400 mb-2">10×</p>
         <p class="text-gray-300">Más rápido que WordPress</p>
       </div>
-      <!-- 100% Personalizable -->
-      <div class="bg-white/10 backdrop-blur-md rounded-xl p-6 hover:bg-white/20 transition-colors shadow-lg">
+      <div class="bg-white/10 rounded-xl p-6 shadow-lg hover:bg-white/20">
         <p class="text-4xl font-bold text-purple-400 mb-2">100%</p>
         <p class="text-gray-300">Personalizable</p>
       </div>
-      <!-- 0 Limitaciones Técnicas -->
-      <div class="bg-white/10 backdrop-blur-md rounded-xl p-6 hover:bg-white/20 transition-colors shadow-lg">
+      <div class="bg-white/10 rounded-xl p-6 shadow-lg hover:bg-white/20">
         <p class="text-4xl font-bold text-green-400 mb-2">0</p>
         <p class="text-gray-300">Limitaciones técnicas</p>
       </div>
     </div>
   </div>
 </section>
-
-

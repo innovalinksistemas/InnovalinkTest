@@ -16,6 +16,7 @@
     "@lucide/astro": "^0.511.0",
     "@types/react": "^19.1.4",
     "@types/react-dom": "^19.1.4",
+    "aos": "^2.3.4",
     "astro": "^5.9.0",
     "astro-particles": "^2.10.0",
     "astro-seo": "^0.8.4",

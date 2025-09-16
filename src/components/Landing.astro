@@ -2,43 +2,36 @@
 import { Image } from "astro:assets";
 import logo from "../assets/logo-innovalink.png";
 import Header from "./Header.astro";
-import Banner1 from "./Banner1.astro";
-import AboutUs from "./AboutUs.astro";
-import Services from "./Services.astro";
-import Solutions from "./Solutions.astro";
-import HeroHelpdeks from "./HeroHelpdeks.astro";
 ---
 
 <Header />
 
-<div class="flex flex-col">
-  <div class="h-screen flex items-center justify-center px-6  pt-[1%]  2xl:pt-[1%]">
-    <div class="z-10 flex flex-col xl:flex-row xl:space-x-32  text-center">
-      <div class="flex flex-col items-center top-[100px]">
-        <Image src={logo} alt="logo" id="hero-logo" class="sm:w-[45rem] mx-auto animate-pulse-glow transition-all duration-300" />
-        <h3 class="text-white text-pretty text-4xl sm:text-lg lg:text-[40px] mt-4">
-          SOLUCIONES TECNOLÓGICAS INNOVADORAS
-        </h3>
-        <div class="pt-12 ">
-          <a href="#services">
-            <button class="bg-transparent border-2 border-white  hover:bg-blue-600 text-white font-bold py-4 m-2 uppercase px-6 rounded-xl transition duration-300">
-              Ver Servicios
-            </button>
-          </a>
-
-          <a href="https://api.whatsapp.com/send?phone=50662020784">
-            <button class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 m-2 uppercase px-6 rounded-xl transition duration-300">
-              Agenda con nosotros
-            </button>
-          </a>
-
-        </div>
-        
-      </div>
-    </div>
+<div class="relative h-screen overflow-hidden">
+  <!-- Fondo Degradado -->
+  <div class="absolute inset-0 z-0 bg-gradient-to-br from-[#191834] via-[#2b2c68] to-[#26b7cd]">
+    <div class="absolute w-[600px] h-[600px] bg-[#61bdaf] opacity-20 rounded-full blur-3xl top-1/4 left-1/4"></div>
+    <div class="absolute w-[400px] h-[400px] bg-[#338aca] opacity-10 rounded-full blur-2xl bottom-10 right-10"></div>
   </div>
 
-
+  <!-- Contenido -->
+  <div class="relative z-10 flex flex-col items-center justify-center h-full px-6 text-center">
+    <Image src={logo} alt="logo" id="hero-logo" class="sm:w-[45rem] mx-auto animate-pulse-glow transition-all duration-300" />
+    <h3 class="text-white text-pretty text-4xl sm:text-lg lg:text-[40px] mt-4">
+      SOLUCIONES TECNOLÓGICAS INNOVADORAS
+    </h3>
+    <div class="pt-12">
+      <a href="#services">
+        <button class="bg-transparent border-2 border-white hover:bg-blue-600 text-white font-bold py-4 m-2 uppercase px-6 rounded-xl transition duration-300">
+          Ver Servicios
+        </button>
+      </a>
+      <a href="https://api.whatsapp.com/send?phone=50662020784">
+        <button class="bg-[#191834] hover:bg-blue-700 text-white font-bold py-4 m-2 uppercase px-6 rounded-xl transition duration-300">
+          Agenda con nosotros
+        </button>
+      </a>
+    </div>
+  </div>
 </div>
 
 <script >
@@ -46,7 +39,6 @@ import HeroHelpdeks from "./HeroHelpdeks.astro";
   import { ScrollTrigger } from "gsap/ScrollTrigger"
 
   gsap.registerPlugin(ScrollTrigger)
-
 
   gsap.to("#hero-logo", {
     scrollTrigger: {

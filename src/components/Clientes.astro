@@ -11,19 +11,31 @@ const clientes = [
 ];
 
 ---
-<section id="clientes" class="py-20 bg-[#241E4E] scroll-mt-20 ">
+<section id="clientes" class="py-20 bg-gradient-to-b from-[#191834] via-[#2b2c68] to-[#338aca] text-white scroll-mt-20">
   <h2 class="text-3xl md:text-4xl text-center font-extrabold bg-clip-text text-transparent
-             bg-gradient-to-r from-cyan-400 to-purple-500 mb-8">Empresas que Confían en Nosotros</h2>
-  <div class="grid grid-cols-2 md:grid-cols-4 gap-8 items-center justify-items-center px-4 max-w-6xl mx-auto">
-    {clientes.map((cliente) => (
+             bg-gradient-to-r from-cyan-400 to-purple-500 mb-12"
+      data-aos="fade-up"
+  >
+    Empresas que Confían en Nosotros
+  </h2>
+
+  <div
+    class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-8 px-6 max-w-6xl mx-auto items-center justify-items-center"
+  >
+    {clientes.map((cliente, index) => (
       <a
-        href={cliente.link || "#"}
+        href={cliente.link}
         target="_blank"
         rel="noopener noreferrer"
-        class="opacity-80 hover:opacity-100 transition-transform hover:scale-105"
+        class="group relative flex items-center justify-center bg-white/10 backdrop-blur-md p-4 rounded-xl hover:bg-white/20 transition-all hover:scale-105 shadow-md"
+        data-aos="zoom-in"
+        data-aos-delay={(index + 1) * 100}
         aria-label={`Cliente: ${cliente.name}`}
       >
-        <img src={cliente.logo} alt={cliente.name} class={cliente.style} />
+        <img src={cliente.logo} alt={cliente.name} class={cliente.style + " transition-all"} />
+        <span class="absolute bottom-2 text-xs text-white/60 opacity-0 group-hover:opacity-100 transition duration-300">
+          {cliente.name}
+        </span>
       </a>
     ))}
   </div>

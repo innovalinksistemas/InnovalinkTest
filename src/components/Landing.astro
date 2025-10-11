@@ -26,9 +26,10 @@ import Header from "./Header.astro";
         </button>
       </a>
       <a href="https://api.whatsapp.com/send?phone=50662020784">
-        <button class="bg-[#191834] hover:bg-blue-700 text-white font-bold py-4 m-2 uppercase px-6 rounded-xl transition duration-300">
+        <button onclick="fbq('track', 'Contact');"  class="bg-[#191834] hover:bg-blue-700 text-white font-bold py-4 m-2 uppercase px-6 rounded-xl transition duration-300">
           Agenda con nosotros
         </button>
+        
       </a>
     </div>
   </div>
@@ -52,4 +53,6 @@ import Header from "./Header.astro";
     y: -40,
     ease: "power1.out",
   });
+
 </script>
+

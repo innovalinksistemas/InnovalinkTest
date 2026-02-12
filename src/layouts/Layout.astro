@@ -32,13 +32,6 @@ import InnovawalletBanner from "@components/InnovawalletBanner.astro";
       }}
     />
 
-    <!-- Google tag (gtag.js) event -->
-<script>
-  gtag('event', 'conversion_event_outbound_click', {
-    // <event_parameters>
-  });
-</script>
-
 <script src="https://t.contentsquare.net/uxa/5f61ac0610ac4.js"></script>
 
 <!-- Google tag (gtag.js) -->
@@ -67,10 +60,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       href="https://fonts.googleapis.com/css2?family=Monda:wght@400..700&family=Playwrite+SK:wght@100..400&family=Radley:ital@0;1&display=swap"
       rel="stylesheet"
     />
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Monda:wght@400..700&family=Playwrite+SK:wght@100..400&family=Radley:ital@0;1&display=swap" rel="stylesheet" />
 
 <!-- Meta Pixel Code -->
 <script>
@@ -103,9 +92,9 @@ src="https://www.facebook.com/tr?id=1959788137935736&ev=PageView&noscript=1"
 
   </head>
 
-  <body class="overflow-x-hidden">
-    
-    <canvas id="cnv" class="absolute top-0 left-0 w-full h-screen"></canvas>
+  <body class="overflow-x-hidden bg-[#0B0F25]">
+
+    <canvas id="cnv" class="absolute top-0 left-0 w-full h-screen -z-10 pointer-events-none"></canvas>
     <div class="">
       <Landing />
       <Banner1 />
@@ -122,39 +111,36 @@ src="https://www.facebook.com/tr?id=1959788137935736&ev=PageView&noscript=1"
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P3VZQ2H7"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
+
+    <script is:inline>
+      var cnvEl = document.getElementById("cnv");
+      if (cnvEl) {
+        var ctx = cnvEl.getContext("2d");
+        var W = window.innerWidth;
+        var H = window.innerHeight;
+
+        cnvEl.width = W;
+        cnvEl.height = H;
+        ctx.fillStyle = "#112";
+        ctx.fillRect(0, 0, W, H);
+
+        ctx.shadowBlur = 10;
+        ctx.shadowColor = "white";
+
+        function animate() {
+          var x = W * Math.random();
+          var y = H * Math.random();
+          var r = 2.5 * Math.random();
+
+          ctx.beginPath();
+          ctx.fillStyle = "white";
+          ctx.arc(x, y, r, 0, Math.PI * 2);
+          ctx.fill();
+
+          setTimeout(animate, 100);
+        }
+        animate();
+      }
+    </script>
   </body>
 </html>
-
-<script>
-  //Get context and screen size;
-  var ctx = cnv.getContext("2d");
-  var W = window.innerWidth;
-  var H = window.innerHeight;
-
-  //Set Canvas and Background Color;
-  cnv.width = W;
-  cnv.height = H;
-  ctx.fillStyle = "#112";
-  ctx.fillRect(0, 0, W, H);
-
-  //Glow effect;
-  ctx.shadowBlur = 10;
-  ctx.shadowColor = "white";
-
-  function animate() {
-    //Random position and size of stars;
-    let x = W * Math.random();
-    let y = H * Math.random();
-    let r = 2.5 * Math.random();
-
-    //Draw the stars;
-    ctx.beginPath();
-    ctx.fillStyle = "white";
-    ctx.arc(x, y, r, 0, Math.PI * 2);
-    ctx.fill();
-
-    //Using setTimeout instead of window.requestAnimationFrame for slower speed... window.requestAnimationFrame is approximately equal to setTimeout(func, 17);
-    setTimeout(animate, 100);
-  }
-  animate();
-</script>

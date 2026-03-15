@@ -1,42 +1,182 @@
 ---
 const clientes = [
-  { name: "Asada La Fortuna", logo: "/clientes/AsadaFortuna.png", link: "https://www.asadalafortuna.com", style: "h-20 w-auto bg-white rounded-full p-2  object-contain" },
-  { name: "Typica", logo: "/clientes/Typica.png", link: "https://www.typicacr.com", style: "h-20 drop-shadow-xl w-20 bg-white rounded-full p-2 object-contain" },
-  { name: "Nene’s", logo: "/clientes/nenes.png", link: "https://www.nenescr.com", style: "h-20 w-20 bg-white rounded-full p-2 object-contain" },
-  { name: "Cabañas del Rio", logo: "/clientes/cabanas.png", link: "https://www.cabanasdelriocr.com", style: "h-20 drop-shadow-xl w-auto object-contain" },
-  { name: "Eden", logo: "/clientes/eden.jpeg", link: "https://www.edenorganicfarmbungalows.com", style: "h-20 drop-shadow-xl rounded-lg w-auto object-contain" },
-  { name: "Broffees", logo: "/clientes/Broffees.png", link: "https://www.broffeescr.com", style: "h-20 w-auto drop-shadow-xl object-contain" },
-  { name: "Vita Cafe", logo: "/clientes/vita.png", link: "https://www.vitacafecr.com", style: "h-20 drop-shadow-xl w-20 object-contain" },
-
+  { name: "Asada La Fortuna", logo: "/clientes/AsadaFortuna.png", link: "https://www.asadalafortuna.com", style: "h-20 w-auto bg-white rounded-full p-2 object-contain" },
+  { name: "Typica", logo: "/clientes/Typica.png", link: "https://www.typicacr.com", style: "h-20 w-20 bg-white rounded-full p-2 object-contain" },
+  { name: "Nene's", logo: "/clientes/nenes.png", link: "https://www.nenescr.com", style: "h-20 w-20 bg-white rounded-full p-2 object-contain" },
+  { name: "Cabañas del Rio", logo: "/clientes/cabanas.png", link: "https://www.cabanasdelriocr.com", style: "h-20 w-auto object-contain" },
+  { name: "Eden", logo: "/clientes/eden.jpeg", link: "https://www.edenorganicfarmbungalows.com", style: "h-20 w-auto rounded-lg object-contain" },
+  { name: "Broffees", logo: "/clientes/Broffees.png", link: "https://www.broffeescr.com", style: "h-20 w-auto object-contain" },
+  { name: "Vita Cafe", logo: "/clientes/vita.png", link: "https://www.vitacafecr.com", style: "h-20 w-20 object-contain" },
 ];
 
+const indicadores = [
+  { value: "98%", label: "Satisfacción promedio" },
+  { value: "+7", label: "Empresas activas" },
+  { value: "<24h", label: "Tiempo de respuesta" },
+];
 ---
-<section id="clientes" class="py-20 bg-gradient-to-b from-[#191834] via-[#2b2c68] to-[#338aca] text-white scroll-mt-20">
-  <h2 class="text-3xl md:text-4xl text-center font-extrabold bg-clip-text text-transparent
-             bg-gradient-to-r from-cyan-400 to-purple-500 mb-12"
-      data-aos="fade-up"
-  >
-    Empresas que Confían en Nosotros
-  </h2>
+<section id="clientes" class="relative overflow-hidden py-24 text-white scroll-mt-20">
+  <div class="pointer-events-none absolute inset-0">
+    <div class="absolute inset-0 bg-[radial-gradient(circle_at_18%_18%,rgba(0,190,255,.18),transparent_38%),radial-gradient(circle_at_88%_70%,rgba(49,255,201,.16),transparent_35%),linear-gradient(180deg,#0a1030_0%,#111b4d_44%,#163f75_100%)]"></div>
+    <div class="clients-grid absolute inset-0 opacity-45"></div>
+    <div class="absolute -left-12 top-14 h-56 w-56 rounded-full bg-cyan-500/10 blur-3xl"></div>
+    <div class="absolute -right-12 bottom-10 h-64 w-64 rounded-full bg-teal-400/10 blur-3xl"></div>
+  </div>
 
-  <div
-    class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-8 px-6 max-w-6xl mx-auto items-center justify-items-center"
-  >
-    {clientes.map((cliente, index) => (
-      <a
-        href={cliente.link}
-        target="_blank"
-        rel="noopener noreferrer"
-        class="group relative flex items-center justify-center bg-white/10 backdrop-blur-md p-4 rounded-xl hover:bg-white/20 transition-all hover:scale-105 shadow-md"
-        data-aos="zoom-in"
-        data-aos-delay={(index + 1) * 100}
-        aria-label={`Cliente: ${cliente.name}`}
+  <div class="relative z-10 mx-auto max-w-6xl px-6">
+    <div class="mx-auto max-w-3xl text-center">
+      <p
+        data-clients-intro
+        class="mx-auto inline-flex rounded-full border border-cyan-300/35 bg-cyan-300/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.16em] text-cyan-100"
       >
-        <img src={cliente.logo} alt={cliente.name} class={cliente.style + " transition-all"} />
-        <span class="absolute bottom-2 text-xs text-white/60 opacity-0 group-hover:opacity-100 transition duration-300">
-          {cliente.name}
-        </span>
-      </a>
-    ))}
+        Red de confianza
+      </p>
+      <h2
+        data-clients-intro
+        class="mt-6 text-balance text-3xl font-extrabold tracking-tight text-transparent sm:text-4xl md:text-5xl bg-clip-text bg-gradient-to-r from-cyan-300 via-sky-300 to-indigo-300"
+      >
+        Empresas que Confían en Nosotros
+      </h2>
+      <p data-clients-intro class="mt-5 text-pretty text-sm text-slate-100/90 sm:text-base">
+        Cada marca que ves aquí delegó procesos críticos en nosotros para vender más, responder mejor y operar con tecnología
+        confiable.
+      </p>
+    </div>
+
+    <div class="relative mt-14">
+      <div class="clients-fade pointer-events-none absolute inset-y-0 left-0 z-20 w-16 sm:w-24"></div>
+      <div class="clients-fade pointer-events-none absolute inset-y-0 right-0 z-20 w-16 rotate-180 sm:w-24"></div>
+
+      <div class="clients-marquee">
+        <div class="clients-track">
+          <ul class="clients-group">
+            {clientes.map((cliente) => (
+              <li class="flex-shrink-0">
+                <a
+                  href={cliente.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="client-card group relative flex h-[172px] w-[210px] flex-col items-center justify-center overflow-hidden rounded-2xl border border-cyan-100/20 bg-white/10 p-4 backdrop-blur-md transition duration-300 hover:-translate-y-1 hover:border-cyan-200/50 hover:bg-white/15 hover:shadow-[0_15px_40px_rgba(5,181,255,.25)]"
+                  aria-label={`Cliente: ${cliente.name}`}
+                >
+                  <span class="client-card-shine absolute inset-0"></span>
+                  <img src={cliente.logo} alt={cliente.name} class={cliente.style + " relative z-10 transition duration-300 group-hover:scale-105"} loading="lazy" />
+                  <span class="relative z-10 mt-4 text-center text-xs font-semibold tracking-wide text-cyan-50/95">{cliente.name}</span>
+                </a>
+              </li>
+            ))}
+          </ul>
+
+          <ul class="clients-group" aria-hidden="true">
+            {clientes.map((cliente) => (
+              <li class="flex-shrink-0">
+                <a
+                  href={cliente.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="client-card group relative flex h-[172px] w-[210px] flex-col items-center justify-center overflow-hidden rounded-2xl border border-cyan-100/20 bg-white/10 p-4 backdrop-blur-md transition duration-300 hover:-translate-y-1 hover:border-cyan-200/50 hover:bg-white/15 hover:shadow-[0_15px_40px_rgba(5,181,255,.25)]"
+                  aria-label={`Cliente: ${cliente.name}`}
+                  tabindex="-1"
+                >
+                  <span class="client-card-shine absolute inset-0"></span>
+                  <img src={cliente.logo} alt="" class={cliente.style + " relative z-10 transition duration-300 group-hover:scale-105"} loading="lazy" />
+                  <span class="relative z-10 mt-4 text-center text-xs font-semibold tracking-wide text-cyan-50/95">{cliente.name}</span>
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-12 grid grid-cols-1 gap-3 text-center sm:grid-cols-3">
+      {indicadores.map((item) => (
+        <div class="rounded-xl border border-cyan-200/15 bg-[#0b163d]/55 px-5 py-4 backdrop-blur-sm">
+          <p class="text-2xl font-extrabold text-cyan-200">{item.value}</p>
+          <p class="mt-1 text-xs uppercase tracking-[0.14em] text-slate-200/80">{item.label}</p>
+        </div>
+      ))}
+    </div>
   </div>
 </section>
+
+<style>
+  .clients-grid {
+    background-image:
+      linear-gradient(rgba(128, 249, 255, 0.1) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(128, 249, 255, 0.08) 1px, transparent 1px);
+    background-size: 34px 34px;
+    mask-image: radial-gradient(circle at center, black 40%, transparent 85%);
+  }
+
+  .client-card-shine {
+    background:
+      radial-gradient(circle at 18% 8%, rgba(115, 255, 255, 0.25), transparent 42%),
+      radial-gradient(circle at 100% 100%, rgba(126, 168, 255, 0.2), transparent 50%);
+    opacity: 0.45;
+    transition: opacity 260ms ease;
+  }
+
+  .client-card:hover .client-card-shine {
+    opacity: 0.78;
+  }
+
+  .clients-marquee {
+    overflow: hidden;
+    padding-block: 0.4rem;
+  }
+
+  .clients-track {
+    --marquee-gap: 1rem;
+    display: flex;
+    gap: var(--marquee-gap);
+    width: max-content;
+    animation: clients-scroll 28s linear infinite;
+    will-change: transform;
+  }
+
+  .clients-group {
+    display: flex;
+    gap: var(--marquee-gap);
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    flex-shrink: 0;
+  }
+
+  .clients-fade {
+    background: linear-gradient(to right, rgba(10, 17, 50, 0.98), rgba(10, 17, 50, 0));
+  }
+
+  .clients-marquee:hover .clients-track {
+    animation-play-state: paused;
+  }
+
+  @keyframes clients-scroll {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(calc(-50% - 0.5rem));
+    }
+  }
+
+  @media (max-width: 768px) {
+    .clients-track {
+      animation-duration: 34s;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .clients-track {
+      width: 100%;
+      flex-wrap: wrap;
+      justify-content: center;
+      animation: none;
+    }
+
+    .clients-group[aria-hidden="true"] {
+      display: none;
+    }
+  }
+</style>

@@ -1,6 +1,9 @@
 ---
 const clientes = [
-  { name: "Asada La Fortuna", logo: "/clientes/AsadaFortuna.png", link: "https://www.asadalafortuna.com", style: "h-20 w-auto bg-white rounded-full p-2 object-contain" },
+  { name: "Asada La Fortuna", logo: "https://cdn.arenalcloud.com/arenal-a65b6eb9-29d7-4dec-9784-b1b37ff7dfce-innovalink/AsadaFortuna_ec9bb18b.png", link: "https://www.asadalafortuna.com", style: "h-20 w-auto bg-white rounded-full p-2 object-contain" },
+  { name: "Asada Tanque", logo: "https://cdn.arenalcloud.com/arenal-a65b6eb9-29d7-4dec-9784-b1b37ff7dfce-innovalink/logoasadatanqueB_b608c6e2.png", link: "https://www.asadalafortuna.com", style: "h-20 w-auto bg-white rounded-full p-2 object-contain" },
+  { name: "Afortunados", logo: "https://cdn.arenalcloud.com/arenal-a65b6eb9-29d7-4dec-9784-b1b37ff7dfce-innovalink/logoafortunadosver_adf263b4.png", link: "https://www.asadalafortuna.com", style: "h-20 w-auto bg-white rounded-full p-2 object-contain" },
+  { name: "La Fortuna Downtown", logo: "/clientes/AsadaFortuna.png", link: "https://www.asadalafortuna.com", style: "h-20 w-auto bg-white rounded-full p-2 object-contain" },
   { name: "Typica", logo: "/clientes/Typica.png", link: "https://www.typicacr.com", style: "h-20 w-20 bg-white rounded-full p-2 object-contain" },
   { name: "Nene's", logo: "/clientes/nenes.png", link: "https://www.nenescr.com", style: "h-20 w-20 bg-white rounded-full p-2 object-contain" },
   { name: "Cabañas del Rio", logo: "/clientes/cabanas.png", link: "https://www.cabanasdelriocr.com", style: "h-20 w-auto object-contain" },
@@ -11,7 +14,7 @@ const clientes = [
 
 const indicadores = [
   { value: "98%", label: "Satisfacción promedio" },
-  { value: "+7", label: "Empresas activas" },
+  { value: "+8", label: "Empresas activas" },
   { value: "<24h", label: "Tiempo de respuesta" },
 ];
 ---
@@ -43,11 +46,11 @@ const indicadores = [
       </p>
     </div>
 
-    <div class="relative mt-14">
+    <div class="relative mt-14 w-full">
       <div class="clients-fade pointer-events-none absolute inset-y-0 left-0 z-20 w-16 sm:w-24"></div>
       <div class="clients-fade pointer-events-none absolute inset-y-0 right-0 z-20 w-16 rotate-180 sm:w-24"></div>
 
-      <div class="clients-marquee">
+      <div class="clients-marquee w-full">
         <div class="clients-track">
           <ul class="clients-group">
             {clientes.map((cliente) => (
@@ -124,6 +127,7 @@ const indicadores = [
   .clients-marquee {
     overflow: hidden;
     padding-block: 0.4rem;
+    width: 100%;
   }
 
   .clients-track {
@@ -133,6 +137,15 @@ const indicadores = [
     width: max-content;
     animation: clients-scroll 28s linear infinite;
     will-change: transform;
+    align-items: center;
+  }
+
+  .clients-group li {
+    flex: 0 0 auto;
+  }
+
+  .client-card {
+    width: 210px;
   }
 
   .clients-group {
@@ -161,9 +174,43 @@ const indicadores = [
     }
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 1024px) {
     .clients-track {
       animation-duration: 34s;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .clients-marquee {
+      padding-inline: 0.5rem;
+    }
+
+    .clients-track {
+      animation-duration: 42s;
+      width: max-content;
+      justify-content: flex-start;
+    }
+
+    .clients-group {
+      gap: 0.6rem;
+    }
+
+    .clients-group li {
+      flex: 0 0 auto;
+    }
+
+    .client-card {
+      width: 150px;
+      min-height: 130px;
+      padding: 0.6rem;
+    }
+
+    .client-card img {
+      max-height: 50px;
+    }
+
+    .clients-fade {
+      display: block;
     }
   }
 
